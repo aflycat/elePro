@@ -1,0 +1,57 @@
+﻿<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left">
+			<a href="#" class="link back icon-only close-picker">
+				<i class="icon iconfont icon-web-back"></i>
+			</a>
+		</div>
+		<div class="center">
+			wy任务执行
+		</div>
+		<div class="right"></div>
+	</div>
+</div>
+<div class="pages" >
+	<div class="page" data-page="startTask" id="startTask">
+		
+	
+		<div class="page-content">
+			<div class="backTop">
+				<i class="iconfont icon-iconset0422"></i>
+			</div>
+			<input id="taskIdS" type="hidden" value="">
+			<!-- 任务id -->
+			<input id="startTime" type="hidden" value="">
+			<!-- 开始时间 -->
+			
+			<input id="createTime" type="hidden" value="">
+			<!-- 创建时间 -->
+			
+			<input id="taskKind" type="hidden" value="">
+			<!-- 任务类型 -->
+			
+			<div class="pageWrap">
+				<p class="codeNum tit">
+					任务编号:<span class=""></span>
+				</p>
+				<p class="startTime tit">
+					开始时间:<span class=""></span>
+				</p>
+				<p class="taskType tit">
+					任务类型:<span class=""></span>
+				</p>
+				
+				<p class="content tit">
+					任务内容:<span class=""></span>
+				</p>
+				<p class="remark tit">
+					任务备注:<span class=""></span>
+				</p>
+				<div class="btn finished" style="display: block;">
+					<p class="button button-fill button-big button-round" onclick="finishedTask()">任务完成</p>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,1584 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left">
+			<a href="#" class="link back icon-only close-picker" onclick="clearTimer()">
+				<i class="icon iconfont icon-web-back"></i>
+			</a>
+		</div>
+		<div class="center">
+			任务执行
+		</div>
+		<div class="right"></div>
+	</div>
+</div>
+<div class="pages" >
+	<div class="page" data-page="wb_startTask" id="startTask">
+		
+	
+		<div class="page-content">
+			<div class="backTop">
+				<i class="iconfont icon-iconset0422"></i>
+			</div>
+			
+			<input id="fixId" type="hidden">
+			<!-- 例行维保类型 -->
+			<!-- <input id="taskTypeS" type="text" value=""> -->
+			<!-- 维保还是物业 -->
+			<input id="taskIdS" type="hidden" value="">
+			<!-- 任务id -->
+			<input id="startTime" type="hidden" value="">
+			<!-- 开始时间 -->
+			<input id="company" type="hidden" value="">
+			<!--使用公司-->
+			<input id="createTime" type="hidden" value="">
+			<!-- 创建时间 -->
+			<input id="equipId" type="hidden" value="">
+			<!-- 维保设备id -->
+			<input id="taskKind" type="hidden" value="">
+			<!-- 任务类型 -->
+			<!-- <input id="serialNum" type="text" value=""> -->
+			<!-- 保单编号 -->
+			<input id="nowFixEq" type="hidden" value="">
+			<!-- 当前维修设备Id -->
+			<div class="pageWrap">
+				<p class="codeNum tit">
+					任务编号:<span class=""></span>
+				</p>
+				<p class="startTime tit">
+					开始时间:<span class=""></span>
+				</p>
+				<p class="taskType tit">
+					任务类型:<span class=""></span>
+				</p>
+				<p class="fixEquip tit">
+					维护设备:<span class=""></span>
+				</p>
+				<p class="internalNum tit">
+					设备编号:<span class=""></span>
+				</p>
+				<p class="content tit">
+					任务内容:<span class=""></span>
+				</p>
+				<p class="remark tit">
+					任务备注:<span class=""></span>
+				</p>
+				<!-- <div class="search">
+					<input type="text" name="" id="searchInp" value="1" placeholder="请输入电梯识别码或扫描二维码"  />
+					<i class="icon iconfont icon-web-saomiao" onclick="myJavaFun.RichScan()"></i>
+				</div> -->
+				<p class="line"></p>
+				<div class="proContent equipLi" style="z-index: 25;">
+					<p class="tit">当前维护电梯</p>
+					<div class="menu" onclick="checkPro(this)">
+						<span ind="0"></span>
+						<i class="icon iconfont icon-web-triangle-bottom" id="checkPro"></i>
+						<!-- icon-web-triangle-top -->
+					</div>
+					<ul class="proList"></ul>
+				</div>
+				<p class="tit" id="bdNumHas" style="display: none;">
+					已有保单<br/>
+					保单编号: <span ></span>
+				</p>
+				<p class="tit fixPro">维护项目</p>
+				<div class="fixItem">
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">机房、滑轮间环境</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">手动紧急操作装置</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">驱动主机</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">制动器各销轴部位</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">制动器间隙</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">制动器作为轿厢意外移动保护
+						装置制停子系统时的自监测</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">编码器</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">限速器各销轴部位</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">层门和轿门旁路装置</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">紧急电动运行</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿顶</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿顶检修开关、停止装置</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">导靴上油杯</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">对重/平衡重块及其压板</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">井道照明</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿厢照明、风扇、应急照明</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿厢检修开关、停止装置</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿内报警装置、对讲系统</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿内显示、指令按钮、IC 卡系统</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿门防撞击保护装置</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿门门锁电气触点</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿门运行</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿厢平层准确度</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">层站召唤、层楼显示</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">层门地坎</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">层门自动关门装置</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">层门门锁自动复位</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">层门门锁电气触点</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">层门锁紧元件啮合长度</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">坑底环境</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  halfMon" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">底坑停止装置</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+
+					<!-- 季度*********************************** -->
+					<div class="row item  quarter" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">减速机润滑油</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  quarter" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">制动衬</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					
+					<div class="row item  quarter" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">编码器</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+
+					<div class="row item  quarter" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">选层器动静触点</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  quarter" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">曳引轮槽、悬挂装置</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  quarter" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">限速器轮槽、限速器钢丝绳</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  quarter" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">靴衬、滚轮</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  quarter" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">验证轿门关闭的电气安全装置</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  quarter" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">层门、轿门系统中传动钢丝绳、
+						链条、传动带</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  quarter" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">层门门导靴</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  quarter" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">消防开关</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  quarter" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">耗能缓冲器</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item  quarter" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">限速器张紧轮装置和电气安全装置</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<!-- 半年维保 *********************************-->
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">电动机与减速机联轴器</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">驱动轮、导向轮轴承部</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">曳引轮槽</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">制动器动作状态监测装置</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">控制柜内各接线端子</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">控制柜各仪表</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">井道、对重、轿顶各反绳轮
+						轴承部</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">悬挂装置、补偿绳</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">绳头组合</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">限速器钢丝绳</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">层门、轿门门扇</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿门开门限制装置</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">对重缓冲距离</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">补偿链(绳)与轿厢、对重接
+						合处</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item halfYear" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">上、下极限开关</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+<!-- 年度************************ -->
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">减速机润滑油</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">控制柜接触器,继电器接触点</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">制动器铁芯(柱塞)</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">制动器制动能力</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">导电回路绝缘性能测试</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">限速器安全钳联动试验</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">上行超速保护装置动作试验</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿厢意外移动保护装置动作试验</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿顶、轿厢架、轿门及其附件安
+装螺栓</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿厢和对重/平衡重的导轨支架</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿厢和对重/平衡重的导轨</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">随行电缆</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">层门装置和地坎</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿厢称重装置</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">安全钳钳座</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">轿底各安装螺栓</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						<!-- <div class="col-10 itemCem">
+							<i class="icon icon-font icon-xiangji"></i>
+						</div> -->
+					</div>
+					<div class="row item" style="border-bottom: 1px solid #c8c7cc">
+						<div class="col-55 itemTit">缓冲器</div>
+						<div class="col-45 itemCho">
+							<p class="txt">
+								<span res="0">确认正常</span>
+								<i class="iconfont icon-web-triangle-bottom"></i>
+							</p>
+							<ul>
+								<li res="0">确认正常</li>
+								<li res="1">调整整备</li>
+								<li res="2">要修理等</li>
+								<li res="3">非本次检查</li>
+								<li res="4">无此项目</li>
+							</ul>
+						</div>
+						
+					</div>
+
+					
+					<p class="tit conDev">故障描述:</p>
+					 <textarea name="" class="messDetail" id="messDetail" cols="" rows="" placeholder="请输入故障内容和结果"></textarea>
+					 <p class="tit remtit">备注信息:</p>
+					 <textarea name="" class="messDetail" id="remark" cols="" rows="" placeholder="请输入请输入其他记录或备注"></textarea>
+					<div class="submitConfig" >
+						<div class="row">
+							<div class="col-10"></div>
+							<div class="col-40">
+								保单二维码
+								
+							</div>
+							<div  class="col-40" >
+								维保签名
+								
+							</div>
+							<div class="col-10"></div>
+						</div>
+						<div class="row">
+							<div class="col-10"></div>
+							<div class="col-40 imgWrap" id="qrcode">
+
+								<!-- <img class="qrCode" id="" src="../../Image/1518156923.png"> -->
+							</div>
+							<div  class="col-40  imgWrap" id="myImg" onclick="letInput()">
+
+								<!-- <img id="aa" class="signName" src=""> -->
+							</div>
+							<div class="col-10"></div>
+						</div>
+					</div>
+					<p class="tit" id="bdNum">保单编号: <span >尚未生成保单</span></p>
+
+                    
+					<div class="btn creatTable">
+						<p class="button button-fill button-big button-round" onclick="taskFinished()">生成当前电梯维保单</p>
+					</div>
+					
+					<div class="btn finished" style="display: none;">
+						<p class="button button-fill button-big button-round" onclick="finishedTask()">任务完成</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

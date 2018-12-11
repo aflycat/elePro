@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<title>AlarmCenter | 首页</title>
+		<link rel="icon" href="/Image/logo.png" type="image/x-icon">
+		<!--通用样式-->
+		<link rel="stylesheet" href="/Styles/Mobile/common.css" />
+		<!--框架样式-->
+		<link rel="stylesheet" href="/Scripts/plug/1.5.0/framework7.ios.min.css">
+		<link rel="stylesheet" href="/Scripts/plug/1.5.0/framework7.ios.colors.min.css">
+		<!--图标字体样式-->
+		<!-- <link rel="stylesheet" href="/fonts/elevator/iconfont.css" /> -->
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_545610_y9pyjs7h1y30udi.css" />
+		<link rel="stylesheet" href="/Styles/Mobile/home.css">
+		<link rel="stylesheet" href="/Styles/Mobile/manage.css" />
+		<link rel="stylesheet" href="/Styles/Mobile/record.css" />
+		<link rel="stylesheet" href="/Styles/Mobile/knowledge.css" />
+		<link rel="stylesheet" href="/Styles/Mobile/statistic.css" />
+		
+		<link rel="stylesheet" href="/Styles/Mobile/postThing.css">
+		<link rel="stylesheet" href="/Styles/Mobile/myInfor.css">
+		<link rel="stylesheet" href="/Styles/Mobile/postSubmit.css">
+		<link rel="stylesheet" href="/Styles/Mobile/postDeal.css">
+		<link rel="stylesheet" href="/Styles/Mobile/newTask.css">
+		<link rel="stylesheet" href="/Styles/Mobile/appraise.css">
+		
+		<link rel="stylesheet" href="/Styles/Mobile/lookMplc.css">
+		<link rel="stylesheet" href="/Styles/Mobile/newTask.css">
+		<style type="text/css">
+			* {
+				/*-webkit-touch-callout: none;*/
+				/*系统默认菜单被禁用*/
+				/*-webkit-user-select: none;*/
+				/*webkit浏览器*/
+				/*-khtml-user-select: none;*/
+				/*早期浏览器*/
+				/*-moz-user-select: none;*/
+				/*火狐*/
+				/*-ms-user-select: none;*/
+				/*IE10*/
+				/*user-select: none;*/
+			}
+			
+			input,
+			textarea {
+				-webkit-user-select: auto;
+				/*webkit浏览器*/
+				margin: 0px;
+				padding: 0px;
+				outline: none;
+			}
+			
+			.BMap_pop div:nth-child(1) div {
+				border-top-left-radius: 12px;
+			}
+			
+			.BMap_pop div:nth-child(3) div {
+				border-top-right-radius: 12px;
+			}
+			
+			.BMap_pop div:nth-child(5) div {
+				border-bottom-left-radius: 12px;
+			}
+			
+			.BMap_pop div:nth-child(7) div {
+				border-bottom-right-radius: 12px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 面板覆盖-->
+		<div class="panel-overlay" style="background: #929292;opacity: .5;"></div>
+		<!-- 左侧边栏-->
+		<div class="panel panel-left panel-layout-light panel-cover" style="background: #FCFCFC;">
+			<div class="list-block list-page">
+				<ul>
+					<li>
+						<a href="edictInfor.html" class="item-link close-panel">
+							<div class="item-content">
+								<div class="item-media"><i class="iconfont icon-yonghu"></i></div>
+								<div class="item-inner">
+									<div class="item-title" id="userName"></div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li id="appRichScan">
+						<a href="#" class="item-link close-panel" onclick="myJavaFun.RichScan();">
+							<div class="item-content">
+								<div class="item-media"><i class="iconfont icon-saoyisao"></i></div>
+								<div class="item-inner">
+									<div class="item-title">扫一扫</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li id="taskAppraise" style="display: block;">
+						<a href="appraise.html" class="item-link close-panel">
+							<div class="item-content">
+								<div class="item-media"><i class="iconfont icon-chaxun"></i></div>
+								<div class="item-inner">
+									<div class="item-title">任务确认评价</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li id="appCacheClearLi">
+						<a href="#" class="item-link" onclick="onAppCacheClear()">
+							<div class="item-content">
+								<div class="item-media"><i class="iconfont icon-huancun"></i></div>
+								<div class="item-inner">
+									<div class="item-title">清空缓存</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="item-link" onclick="onAbout()">
+							<div class="item-content">
+								<div class="item-media"><i class="iconfont icon-guanyu"></i></div>
+								<div class="item-inner">
+									<div class="item-title">关于</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="item-link" onclick="onUserLogout()">
+							<div class="item-content">
+								<div class="item-media"><i class="iconfont icon-logout"></i></div>
+								<div class="item-inner">
+									<div class="item-title">注销</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- 右侧边栏-->
+		<div class="panel panel-right panel-reveal">
+			<div class="content-block">
+				<p>右侧边栏内容</p>
+			</div>
+		</div>
+		
+		<!-- 视图 -->
+		<div class="views">
+			<div class="view view-main">
+				<!-- 顶部导航条-->
+				<div class="navbar">
+					<div class="navbar-inner">
+						<!-- 标题 -->
+						<div class="center sliding">电联网</div>
+						<div class="right">
+							<a href="#" class="link icon-only open-panel"><i class="iconfont icon-web-setup"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- 子界面-->
+				<div class="pages navbar-through toolbar-through">
+					<div data-page="home" class="page" id="home">
+						<!-- 界面内容 -->
+						<div class="page-content homePageContents" id="homeContents" style="display:none;">
+							<div class="main">
+								<div class="header-content">
+									<a id="userInfoBtnId" class="sureLoginBtn">
+										<i class="iconfont icon-web-mine-all"></i>
+										<span>点击登录</span>
+									</a>
+								</div>
+								<div class="task-list" id="taskListId" style="display: none;">
+									<a href="taskList.html" class="task-tab task-tab-need">
+										<span>累计待办任务</span>
+										<label id="needTaskNumId"></label>
+									</a>
+									<a href="taskList.html" class="task-tab task-tab-handle">
+										<span>正在办理任务</span>
+										<label id="dealTaskNumId"></label>
+									</a>
+									<a href="taskList.html" class="task-tab task-tab-finish">
+										<span>已经完成任务</span>
+										<label id="finishTaskNumId"></label>
+									</a>
+								</div>
+								<div class="knowledge-content" id="knowledgeListId">
+									<div class="knowledge-icon">
+										<i class="iconfont icon-web-knowledge"></i>
+										<span>知识库</span>
+										<i class="iconfont icon-web-search" id="knowledgeSearchId"></i>
+									</div>
+									<div id="searchKnowledgeBoxId" style="display: none;">
+										<form data-search-list=".search-here" data-search-in=".item-title" class="searchbar searchbar-init">
+											<div class="searchbar-input">
+												<input type="search" placeholder="搜索" />
+												<a href="#" class="searchbar-clear"></a>
+											</div>
+											<a href="#" class="searchbar-cancel">取消</a>
+										</form>
+										<div class="searchbar-overlay"></div>
+									</div>
+									<input type="hidden" id="knowledgeListId" />
+									<div class="knowledge-list" id="documentListId">
+										<ul class=" search-here searchbar-found">
+											
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 底部工具栏-->
+				<div class="toolbar tabbar tabbar-labels homeToolBar">
+					<div class="toolbar-inner disabled" style="display:none;" id="toolbarListId"></div>
+				</div>
+				<div class="picker-modal write">
+			    <div class="toolbar">
+			      <div class="toolbar-inner">
+			        <div class="left"><a href="#" class="close-picker" id="myEmpty">取消</a></div>
+			        <div class="right"><a id="mySave" class="close-picker" >确定</a></div>
+			      </div>
+			    </div>
+			    <div class="picker-modal-inner">
+						<div class="js-signature" id="mySignature">
+							<canvas id="ctx"></canvas>
+						</div>	
+			    </div>
+			</div>
+			</div>
+		</div>
+		<div class="picker-modal picker-info">
+		    <div class="toolbar">
+		      <div class="toolbar-inner">
+		        <div class="left"></div>
+		        <div class="right"><a href="#" class="close-picker">确定</a></div>
+		      </div>
+		    </div>
+		    <div class="picker-modal-inner">
+		      <div class="content-block" style="background: #fff;width: 100%;height:100%;overflow: hidden;margin-top: 0;">
+		       		<p style="text-align: center;font-size: 1.2rem;color:#333;">分享链接为</p>
+		       		<p id="srcStr" style="width:80%;margin:0 auto;margin-top:1em;word-break: break-all;"></p>
+		       		<p style="margin-top:2em;text-align: right;">长按复制链接给您的好友吧</p>
+		      </div>
+		    </div>
+	  	</div>
+		<!-- 框架js-->
+		<script src="/Scripts/plug/jquery-1.10.1.min.js"></script>
+		<script src="/Scripts/plug/echarts-all-3.js"></script>
+		<script type="text/javascript" src="/Scripts/plug/1.5.0/framework7.js"></script>
+		<script type="text/javascript" src="/Scripts/plug/html2canvas.min.js"></script>
+		<!-- 首页js-->
+		<script type="text/javascript" src="/Scripts/mobile/home.js"></script>
+		<!-- 移动端入口js-->
+		<script type="text/javascript" src="/Scripts/mobile/mobileAll.js"></script>
+		<!-- 百度地图定位 -->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ED2d59e127427eba231c96ba1b49af84"></script>
+		<script type="text/javascript" src="/Scripts/mobile/TextIconOverlay_min.js"></script>
+		<script type="text/javascript" src="/Scripts/mobile/InfoBox_min.js"></script>
+		<script type="text/javascript" src="/Scripts/mobile/MarkerClusterer.js"></script>
+		<script type="text/javascript" src="/Scripts/mobile/EventWrapper.min.js"></script>
+
+		<!-- 页面跳转js-->
+		<script type="text/javascript" src="/Scripts/mobile/PageJs.js"></script>
+		<!-- 插件-->
+		<script type="text/javascript" src="/Scripts/mobile/plugin/appPopup.js"></script>
+		<!-- 二维扫描结果 -->
+		<script type="text/javascript" src="/Scripts/mobile/RichScanCallback.js"></script>
+		<!-- 跨浏览器兼容的HTML5视频音频播放器 -->
+		<script type="text/javascript" src="/Scripts/mobile/plugin/html5media.min.js"></script>
+		<script type="text/javascript" src="/Scripts/public.js"></script>
+		<script type="text/javascript" src="/Scripts/mobile/bootstrap.min.js"></script>
+   		<script type="text/javascript" src="/Scripts/mobile/shouxie.js"></script>
+    	 <script type="text/javascript" src="/Scripts/mobile/jquery.qrcode.min.js"></script>
+    	 <!-- <script type="text/javascript" src="/Scripts/clipboard.js"></script> -->
+	</body>
+
+</html>

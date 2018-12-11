@@ -1,0 +1,213 @@
+#lookMplc .codeNum,#lookMplc .startTime{
+	width: 95%;
+	margin:1rem auto;
+}
+#lookMplc .pageWrap{
+	width: 95%;
+	/*border:1px solid red;*/
+	margin: 10px auto;
+	background: #fff;
+	overflow: hidden;
+	padding-bottom: 0.5rem;
+}
+#lookMplc .search{
+	width: 100%;
+	height:2.5rem;
+	background: #fff;
+	line-height:2.5rem ;
+}
+#lookMplc .search input{
+	width: 78%;
+	height: 1.6rem;
+	background: #f7f7f9;
+	border-radius: 1rem;
+	outline: none;
+	border: none;
+	line-height: 1.6rem;
+	padding-left: 1rem;
+	margin-left: 0.5rem;
+}
+#lookMplc .search i{
+	font-size: 1.6rem !important;
+	margin-left:0.8rem;
+	color: #228afe;
+}
+#lookMplc .proContent{
+	width: 100%;
+	height: 15%;
+	position: relative;
+	z-index:10;
+
+}
+#lookMplc  .tit{
+	font-size: 0.8rem;
+	color:#515151;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-left: 0.5rem;
+	width: auto;
+
+}
+#lookMplc .proContent .menu{
+	width: 90%;
+	height: 2rem;
+	line-height: 2rem;
+	background: #f7f7f9;
+	margin: 0 0.5rem;
+	color:#959595 ;
+	padding-left: 4%;
+}
+#lookMplc .proContent .menu span{
+	float: left;
+}
+#lookMplc .proContent .menu i{
+	float: right;
+	margin-right: 3%;
+	font-size: 0.8rem !important;
+}
+#lookMplc .proContent .proList{
+	position: absolute;
+	width: 90%;
+	min-height: 2rem;
+	max-height: 8rem;
+	line-height: 2rem;
+	background: #f7f7f9;
+	margin: 0 0.5rem;
+	color:#959595 ;
+	padding-left: 4%;
+	overflow: hidden;
+	overflow-y: scroll;
+	display: none;
+
+}
+#lookMplc .proContent .proList li{
+	border-bottom: 1px solid #fff;
+	height: 2rem;
+}
+#lookMplc .line{
+	width: 95%;
+	margin:1rem auto;
+	border-bottom: 1px solid #c8c7cc;
+}
+#lookMplc .fixItem{
+	width: 95%;
+	margin:0 auto;
+}
+#lookMplc .fixItem .item{
+	min-height: 2.8rem;
+	/*line-height: 2.8rem;*/
+	font-size: 0.9rem;
+	color:#333 ;
+	margin-bottom: 0.2rem;
+	padding-bottom: 0.4rem;
+	border-bottom: :1px solid #c8c7cc !important;
+	/*display: none;*/
+}
+#lookMplc .fixItem .item .itemCho{
+	position: relative;
+}
+#lookMplc .fixItem .item .itemCho .txt{
+	margin:0;
+	height:1.8rem;
+	line-height: 1.8rem;
+	margin-top: 0.5rem;
+	background:  #f7f7f9;
+	padding: 0 0.8rem;
+	border-radius: 0.9rem;
+	border:1px solid #c8c7cc;
+	text-align: center;
+
+}
+
+#lookMplc .fixItem .item .itemTit{
+	word-break: break-all;
+	margin-top: 0.8rem;
+}
+#lookMplc .fixItem .item .itemCho .txt span{
+	/*float: left;*/
+
+	color: #228afe;
+}
+
+#lookMplc .fixItem .item .itemCho ul{
+	display: none;
+	position: absolute;
+	z-index: 2;
+	/*border:1px solid red;*/
+	width: 100%;
+	border:1px solid #c8c7cc;
+	box-sizing: border-box;
+	border-top: none;
+	border-bottom-left-radius: 0.9rem;
+	border-bottom-right-radius: .9rem;
+
+}
+#lookMplc .fixItem .item .itemCho ul li{
+	padding: 0 0.8rem;
+	height: 1.8rem;
+	line-height:1.8rem ;
+	border-bottom: 1px solid #fff;
+	box-sizing: border-box;
+	background:#f7f7f9;
+	color: #228afe;
+}
+#lookMplc .fixItem .item .itemCho ul li:last-child{
+	border-bottom-left-radius: 0.9rem;
+	border-bottom-right-radius: .9rem;
+}
+#lookMplc .fixItem .item .itemCem{
+	text-align: center;
+	margin-top: 0.8rem;
+}
+#lookMplc  .messDetail{
+	width: 98%;
+	height:4rem;
+	display: block;
+	margin-top:0.5rem;
+	resize:none;
+	background: #f7f7f9;
+	color:#959595;
+	padding-top: 0.5rem;
+	padding-left: 2%;
+	border:none 0;
+	outline: none;
+}
+#lookMplc   .btn{
+	width:100%;
+	height: 5rem;
+}
+
+#lookMplc   .btn{
+	width:100%;
+	height: 5rem;
+}
+#lookMplc  .btn.finished{
+	display: none;
+}
+#lookMplc  .btn p{
+	margin: 2rem auto;
+	width: 60%;
+}
+#lookMplc  .submitConfig{
+	height: 12rem;
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	/*border:1px solid red;*/
+}
+#lookMplc  .submitConfig .imgWrap{
+	border:1px dashed #c8c7cc;
+	min-height: 7.6rem;
+	/*height: auto;*/
+	padding:0.5rem 0rem;
+	margin-top: 1.5rem;
+}
+#lookMplc  .submitConfig img{
+	width: 100%;
+	height:auto;
+}
+
+#mySignature{
+	height: 100%;
+	text-align: center;
+}

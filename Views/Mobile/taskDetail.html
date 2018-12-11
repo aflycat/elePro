@@ -1,0 +1,124 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left">
+			<a href="#" class="link back icon-only">
+				<i class="icon iconfont icon-web-back"></i>
+			</a>
+		</div>
+		<div class="center sliding">任务详情</div>
+	</div>
+</div>
+<div class="pages">
+	<div data-page="taskDetail" class="page" id="taskDetail">
+		<div class="page-content">
+			<input id="taskTypeDe" value="" type="hidden">
+			<input id="taskIdDe" value="" type="hidden" >
+			<input id="ppType" value="" type="hidden" >
+			<div class="itemWrap list-block ">
+				<ul class="wy">
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="itemHead item-title label">创建人员
+								</div>
+								<div class="item-input creatorName"></div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="itemHead item-title label">巡查人员
+								</div>
+								<div class="item-input name"></div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="itemHead item-title label">任务类型
+								</div>
+								<div class="item-input type">巡查任务</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="itemHead item-title label">任务内容
+								</div>
+								<div class="item-input content"></div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="itemHead item-title label">任务备注
+								</div>
+								<div class="item-input remark"></div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="itemHead item-title label">计划开始时间
+								</div>
+								<div class="item-input planStar"></div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="itemHead item-title label">计划创建时间
+								</div>
+								<div class="item-input creatTime"></div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="itemHead item-title label">任务状态
+								</div>
+								<div class="item-input taskStatus">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="itemHead item-title label">实际开始时间
+								</div>
+								<div class="item-input startTime">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="itemHead item-title label">计划完成时间
+								</div>
+								<div class="item-input finishTime">
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<div class="btn goStar">
+						<p class="button button-fill button-big button-round" onclick="continueTask(this)">开始任务</p>
+					</div>
+
+					<div class="btn edict">
+						<p class="button button-fill button-big button-round"   onclick="edictTask()">任务转派</p>
+					</div>
+				</ul>
+		</div>
+	</div>
+</div>
+

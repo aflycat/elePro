@@ -1,0 +1,109 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+    <!-- 原始地址：//webapi.amap.com/ui/1.0/ui/geo/DistrictCluster/examples/plus-point-simplifier.html -->
+    <!--  <base href="//webapi.amap.com/ui/1.0/ui/geo/DistrictCluster/examples/" />-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>维保单位分布图</title>
+    <link rel="stylesheet" href="../CSS/Elevator.css" />
+    <link rel="stylesheet" href="../fonts/iconfont.css" />
+    <link rel="stylesheet" href="../CSS/Marker.css" />
+    <style>
+        html,
+        body,
+        #container {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+
+        #loadingTip {
+            position: absolute;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            padding: 3px 10px;
+            background: red;
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <div class="searchbox">
+        <img src="../Images/test1.png" class="logo" />
+        <input type="search" id="searchipt" placeholder="输入维保单位名称" spellcheck="false" maxlength="256" autocomplete="off"  list="mytest"/>
+        <datalist id="mytest">
+            <!--<option value="深圳市西继迅达电梯有限公司">
+            <option value="深圳市新奥电梯有限公司">
+            <option value="深圳市盛仕达电梯有限公司">
+            <option value="深圳市天之健电梯技术有限公司">
+            <option value="深圳市凯曦电梯有限公司">-->
+            <option value="123"></option>
+        </datalist> 
+        <div id="searchbtn" onclick="FindMaintain()">
+            <i class="iconfont icon-search searchlogo icontip" style="display:block"></i>
+        </div>
+        <div id="Backbtn" onclick="Back()">
+            <i class="iconfont icon-back searchlogo icontip" style="display:block"></i>
+        </div>
+    </div>
+    <template id="Maintain">
+        <div class="elevator_main">
+            <p class="actDynPopupTitle">{{Name}}</p>
+            <div class="actDynPopupContent">
+                <div class="Content">
+                    <p>单位代码：</p>
+                    <p>{{Code}}</p>
+                </div>
+                <div class="Content">
+                    <p>资格证书号：</p>
+                    <p>{{Certificate}}</p>
+                </div>
+                <div class="Content">
+                    <p>联系人：</p>
+                    <p>{{People}}</p>
+                </div>
+                <div class="Content">
+                    <p>联系人电话：</p>
+                    <p>{{Phone}}</p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="Maintainer">
+        <div class="elevator_main">
+            <p class="actDynPopupTitle">{{Name}}</p>
+            <div class="actDynPopupContent">
+                <div class="Content">
+                    <p>当前所属维保公司：</p>
+                    <p>{{Maintain}}</p>
+                </div>
+                <div class="Content">
+                    <p>证件有效：</p>
+                    <p>{{Paperwork}}</p>
+                </div>
+                <div class="Content">
+                    <p>特种作业操作证号：</p>
+                    <p>{{PaperworkID}}</p>
+                </div>
+                <div class="Content">
+                    <p>联系电话：</p>
+                    <p>{{Phone}}</p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script type="text/javascript" src='//webapi.amap.com/maps?v=1.4.0&key=ce104a278e3425c984c0b21bee94aa9a'></script>
+    <!-- UI组件库 1.0 -->
+    <script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+    <script src="../JS/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/plug/jquery.signalR-2.1.2.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="../JS/vue.js"></script>
+    <script src="../JS/MaintainMain.js"></script>
+</body>
+</html>

@@ -1,0 +1,530 @@
+.redColor{
+	color:#ec364f !important;
+}
+.greenColor{
+	color:green  !important;
+}
+.huiColor{
+	color:#666 !important;
+}
+.blueColor{
+	color:#1e88fe  !important;
+}
+.yellowColor{
+	color:#F0B123  !important;
+}
+/*编辑资料*/
+
+#newTask  ul{margin-bottom: 20px;}
+
+
+#newTask .list-block ul li .item-inner{
+	min-height:50px;
+}
+/*任务列表*/
+#taskList .dateChoo{
+	width:100%;
+	height:2rem;
+	background: #fff;
+	margin-top: 0;
+	position: fixed;
+	z-index: 8;
+	top: 44px;
+	text-align: center;
+}
+#taskList .dateChoo input{
+	width: 100%;
+	height: 1.5rem;
+	border:none;
+	/*margin-top: 0.4rem;*/
+	text-align: center;
+
+}
+.card-footer:before{
+	height: 0;
+}
+#taskList .taskList .timeTyp{
+	border-bottom: 1px solid #eee;
+	padding: 5px 15px;
+	font-size: 1rem;
+}
+#taskList .taskList .timeTyp i{
+	font-size: 1.2rem !important;
+}
+#taskList .taskList .timeTyp .iconType span{
+	position:relative;
+	top: 0.2rem;
+	left:0.6rem ;
+}
+#taskList .taskList .timeTyp .time{
+	font-size: 0.8rem;
+}
+#taskList .taskList .timeTyp .time span{
+	margin-left:0.4rem;
+}
+#taskList .taskList .equNum{
+	word-wrap: break-word;
+}
+#taskList .taskList .addr{
+	margin:0;
+}
+#taskList .taskList .rig{
+	text-align: center;
+
+}
+#taskList .taskList .rig .status{
+	/*float: left;*/
+	
+}
+
+#taskList .taskList .lookMap{
+	display: block;
+	height: 1.6rem;
+	width: auto;
+	line-height: 1.8rem;
+	padding:0 0.5rem;
+	color:#fff ;
+	background:#1e88fe ;
+	border-radius: 10px;
+	border:none;
+	margin:0 auto;
+}
+#taskList .taskList .finishedImg{
+	position: absolute;
+	top: -8px;
+	width: 3rem;
+	height: auto;
+}
+/*任务创建*/
+#newTask .itemHead{
+	width: 30%;
+	color:#b8b8b8;
+}
+
+#newTask .itemHead{
+	color:#b8b8b8;
+}
+#newTask .proContent{
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index:10;
+	background: #fff;
+	padding-bottom: 1rem;
+	clear:both;
+	/*overflow: hidden;*/
+}
+#newTask .proContent .tit{
+	font-size: 0.8rem;
+	color:#515151;
+	font-weight: bold;
+	letter-spacing: 2px;
+	width: auto;
+	padding-top:10px;
+	padding-left: 15px;
+	margin:0 0 0.5em 0;
+}
+#newTask .proContent .menu{
+	width: 88%;
+	height: 2rem;
+	line-height: 2rem;
+	background: #f7f7f9;
+	margin: 0 1rem;
+	color: #666;
+	padding-left: 4%;
+}
+#newTask .proContent .date{
+	width:35%;
+	float: left;
+	margin-right: 1rem;
+	color: #666;
+	height: 2rem;
+	margin: 0 1rem;
+	background: #f7f7f9;
+	line-height: 2rem;
+	text-align: left;
+	padding-left: 4%;
+}
+#newTask .proContent .time{
+	width: 20%;
+	float: left;
+	line-height: 2rem;
+	height: 2rem;
+	color: #666;
+	background: #f7f7f9;
+	text-align: center;
+}
+#newTask .proContent .menu input{
+	height: 100%;
+	color: #666;
+}
+#newTask .proContent .menu span{
+	float: left;
+	font-size: 16px;
+	display: inline-block;
+	text-overflow: ellipsis;
+	width: 90%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#newTask .proContent .menu i{
+	float: right;
+	margin-right: 3%;
+	font-size: 0.8rem !important;
+}
+#newTask .proContent .proList{
+	position: absolute;
+	width:88%;
+	min-height:50px;
+	max-height:250px;
+	line-height: 2rem;
+	background: #f7f7f9;
+	margin: 0 1rem;
+	color:#959595 ;
+	padding-left: 4%;
+	overflow: hidden;
+	overflow-y: scroll;
+	display: none;
+}
+#newTask .proContent .proList li{
+	height:50px;
+	padding-left: 0;
+}
+#newTask .proContent .proList li label{
+	padding-left: 0;
+	/*height: 100%;*/
+}
+#newTask .proContent .proList li .peoDet{
+	width:100%;
+}
+#newTask .proContent .proList li .peoDet .name{
+	width:50%;
+	display: inline-block;
+}
+#newTask .btn{
+	width: 100%;
+	background: #fff;
+	padding: 3rem 0;
+	/*padding-bottom: 6rem;*/
+}
+#newTask .btn p{
+	width: 60%;
+	margin: 0 auto;
+
+}
+/*任务详情*/
+#taskDetail  ul{margin-bottom: 20px;}
+
+
+#taskDetail .list-block ul li .item-inner{
+	min-height:50px;
+	color: #333;
+}
+#taskDetail .itemHead{
+	width:30%;
+	font-size: 16px;
+	color:#b8b8b8;
+}
+#taskDetail ul  .btn{
+	width:100%;
+	height: 5rem;
+}
+#taskDetail ul  .btn p{
+	margin: 2rem auto;
+	width: 60%;
+}
+#taskDetail .twoBtn{
+	width:90% !important;
+	height:auto;
+	padding:0 5%;
+	margin-top:2rem;
+}
+#taskDetail .twoBtn p,#taskDetail .twoBtn a{
+	width:40%;
+	float:left;
+	display: block;
+
+}
+#taskDetail .goStar.twoBtn p{
+	float: right;
+	width:40% ;
+	margin:0 !important;
+}
+/*开始任务*/
+#startTask .codeNum,#startTask .startTime{
+	width: 95%;
+	margin:1rem auto;
+}
+#startTask .pageWrap{
+	width: 95%;
+	/*border:1px solid red;*/
+	margin: 10px auto;
+	background: #fff;
+	overflow: hidden;
+	padding-bottom: 0.5rem;
+}
+#startTask .search{
+	width: 100%;
+	height:2.5rem;
+	background: #fff;
+	line-height:2.5rem ;
+}
+#startTask .search input{
+	width: 78%;
+	height: 1.6rem;
+	background: #f7f7f9;
+	border-radius: 1rem;
+	outline: none;
+	border: none;
+	line-height: 1.6rem;
+	padding-left: 1rem;
+	margin-left: 0.5rem;
+}
+#startTask .search i{
+	font-size: 1.6rem !important;
+	margin-left:0.8rem;
+	color: #228afe;
+}
+#startTask .proContent{
+	width: 100%;
+	height: 15%;
+	position: relative;
+	z-index:10;
+	display: none;
+}
+#startTask  .tit{
+	font-size: 0.8rem;
+	color:#515151;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-left: 0.5rem;
+	width: auto;
+
+}
+#startTask .proContent .menu{
+	width: 90%;
+	height: 2rem;
+	line-height: 2rem;
+	background: #f7f7f9;
+	margin: 0 0.5rem;
+	color:#959595 ;
+	padding-left: 4%;
+}
+#startTask .proContent .menu span{
+	float: left;
+}
+#startTask .proContent .menu i{
+	float: right;
+	margin-right: 3%;
+	font-size: 0.8rem !important;
+}
+#startTask .proContent .proList{
+	position: absolute;
+	width: 90%;
+	min-height: 2rem;
+	max-height: 8rem;
+	line-height: 2rem;
+	background: #f7f7f9;
+	margin: 0 0.5rem;
+	color:#959595 ;
+	padding-left: 4%;
+	overflow: hidden;
+	overflow-y: scroll;
+	display: none;
+
+}
+#startTask .proContent .proList li{
+	border-bottom: 1px solid #fff;
+	height: 2rem;
+}
+#startTask .line{
+	width: 95%;
+	margin:1rem auto;
+	border-bottom: 1px solid #c8c7cc;
+}
+#startTask .fixItem{
+	width: 95%;
+	margin:0 auto;
+}
+#startTask .fixItem .item{
+	min-height: 2.8rem;
+	/*line-height: 2.8rem;*/
+	font-size: 0.9rem;
+	color:#333 ;
+	margin-bottom: 0.2rem;
+	padding-bottom: 0.4rem;
+	/*display: none;*/
+}
+#startTask .fixItem .item .itemCho{
+	position: relative;
+}
+#startTask .fixItem .item .itemCho .txt{
+	margin:0;
+	height:1.8rem;
+	line-height: 1.8rem;
+	margin-top: 0.5rem;
+	background:  #f7f7f9;
+	padding: 0 0.8rem;
+	border-radius: 0.9rem;
+	border:1px solid #c8c7cc;
+
+}
+.openRadious{
+	border-bottom-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+	border-bottom: none 0 !important;
+}
+#startTask .fixItem .item .itemTit{
+	word-break: break-all;
+	margin-top: 0.8rem;
+}
+#startTask .fixItem .item .itemCho .txt span{
+	float: left;
+	color: #228afe;
+}
+#startTask .fixItem .item .itemCho .txt i{
+	float: right;
+	font-size: 0.8rem !important;
+	line-height: 2rem;
+	color: #959595;
+}
+#startTask .fixItem .item .itemCho ul{
+	display: none;
+	position: absolute;
+	z-index: 2;
+	/*border:1px solid red;*/
+	width: 100%;
+	border:1px solid #c8c7cc;
+	box-sizing: border-box;
+	border-top: none;
+	border-bottom-left-radius: 0.9rem;
+	border-bottom-right-radius: .9rem;
+
+}
+#startTask .fixItem .item .itemCho ul li{
+	padding: 0 0.8rem;
+	height: 1.8rem;
+	line-height:1.8rem ;
+	border-bottom: 1px solid #fff;
+	box-sizing: border-box;
+	background:#f7f7f9;
+	color: #228afe;
+}
+#startTask .fixItem .item .itemCho ul li:last-child{
+	border-bottom-left-radius: 0.9rem;
+	border-bottom-right-radius: .9rem;
+}
+#startTask .fixItem .item .itemCem{
+	text-align: center;
+	margin-top: 0.8rem;
+}
+#startTask  .messDetail{
+	width: 98%;
+	height:4rem;
+	display: block;
+	margin-top:0.5rem;
+	resize:none;
+	background: #f7f7f9;
+	color:#959595;
+	padding-top: 0.5rem;
+	padding-left: 2%;
+	border:none 0;
+	outline: none;
+}
+#startTask   .btn{
+	width:100%;
+	height: 5rem;
+}
+
+#startTask   .btn{
+	width:100%;
+	height: 5rem;
+}
+#startTask  .btn.finished{
+	display: none;
+}
+#startTask  .btn p{
+	margin: 2rem auto;
+	width: 60%;
+}
+#startTask  .submitConfig{
+	height: 12rem;
+	/*display: block;*/
+	text-align: center;
+	overflow: hidden;
+	margin-top:2rem;
+	/*border:1px solid red;*/
+}
+#startTask  .submitConfig .imgWrap{
+	border:1px dashed #c8c7cc;
+	min-height: 7.6rem;
+	/*height: auto;*/
+	padding:0.5rem 0rem;
+	margin-top: 1.5rem;
+}
+#startTask  .submitConfig img{
+	width: 100%;
+	height:auto;
+}
+
+#mySignature{
+	height: 100%;
+	text-align: center;
+}
+.backTop{
+	position:fixed;
+	right:22px;
+	bottom: 88px;
+	border:1px solid #eee;
+	z-index: 1500;
+	width:3rem;
+	height:3rem;
+	border-radius: 50%;
+	line-height: 3rem;
+	text-align: center;
+	background: #007aff;
+	display: none;
+}
+.backTop i{
+	font-size:2rem;
+	color:#fff;
+}
+ .upPhoto{
+	width: 100%;
+	height: 35%;
+	
+}
+ .upPhoto .tit{
+	font-size:0.8rem;
+	color:#515151;
+	font-weight: bold;
+	letter-spacing: 2px;
+	width: auto;
+	margin-left:0 !important;
+
+}
+ .upPhoto .imgBox{
+	position: relative;
+	width: 30%;
+	height: 5rem;
+	text-align: center;
+	line-height: 5rem;
+
+	font-size: 3rem;
+	color: #b7b7b7;
+	border:1px dashed #b7b7b7;
+}
+ .upPhoto .imgBox img, .upPhoto .imgBox input{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 0;
+	z-index: 3;
+
+}
+ .upPhoto .imgBox input{
+	z-index: 5;
+	opacity: 0;
+}

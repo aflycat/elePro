@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+     <!-- 原始地址：//webapi.amap.com/ui/1.0/ui/geo/DistrictCluster/examples/plus-point-simplifier.html -->
+     <!--  <base href="//webapi.amap.com/ui/1.0/ui/geo/DistrictCluster/examples/" />-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>电梯分布图</title>
+    <link rel="stylesheet" href="../CSS/Elevator.css" />
+    <link rel="stylesheet" href="../fonts/iconfont.css" />
+    <link rel="stylesheet" href="../CSS/Marker.css" />
+    <style>
+        html,
+        body,
+        #container {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+        #loadingTip {
+            position: absolute;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            padding: 3px 10px;
+            background: red;
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <div class="searchbox">
+        <img src="../Images/Elevator.png" class="logo"/>
+        <input type="text" id="searchipt" placeholder="输入查询的名称" maxlength="256" autocomplete="off"/>
+        <div id="searchbtn" onclick="FindElevator()">
+            <i class="iconfont icon-search searchlogo icontip" style="display:block"></i>
+        </div>
+        <div id="Backbtn" onclick="Back()">
+            <i class="iconfont icon-back searchlogo icontip" style="display:block"></i>
+        </div>
+    </div>
+    <div class="legend">
+        <ul class="legendul">
+            <li><a href="#">正常<span class="lengdendSpan" style="background: url(../Images/CommunicationOK.png) no-repeat;background-size: 100% 100%;background-position: 1px;"></span></a></li>
+            <li><a href="#">警告<span class="lengdendSpan" style="background: url(../Images/HaveWarn.png) no-repeat;background-size: 100% 100%;background-position: 1px;"></span></a></li>
+            <li><a href="#">报警<span class="lengdendSpan" style="background: url(../Images/HaveAlarm.png) no-repeat;background-size: 100% 100%;background-position: 1px;"></span></a></li>
+        </ul>
+    </div>
+    <template id="Elevator">
+        <div class="elevator_main">
+               <p class="actDynPopupTitle">{{Name}}</p>
+            <div class="actDynPopupContent">
+                <ul>
+                    <li v-for="item in Elevators">
+                        <div class="li_main">
+                            <img :src="item.url" />
+                            <p>{{item.name}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="dynPopupBtn"><a href="#" v-on:click="SwitchInfo()">查看电梯详情&nbsp;&nbsp;</a></div>
+        </div>
+    </template>
+    <script type="text/javascript" src='//webapi.amap.com/maps?v=1.4.0&key=ce104a278e3425c984c0b21bee94aa9a'></script>
+    <!-- UI组件库 1.0 -->
+    <script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+    <script src="../JS/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/plug/jquery.signalR-2.1.2.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="../JS/vue.js"></script>
+    <script src="../JS/ElevatorMain.js"></script>
+</body>
+</html>

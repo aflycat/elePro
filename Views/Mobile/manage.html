@@ -1,0 +1,37 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left">
+          <a href="#" class="link back icon-only">
+            <i class="iconfont icon-web-back"></i>
+          </a>
+        </div>
+		<div class="center sliding">成员列表</div>
+	</div>
+</div>
+<div class="pages">
+	<div data-page="manage" class="page" id="manage">
+		<form data-search-list=".search-here" data-search-in=".item-title" class="searchbar searchbar-init">
+			<div class="searchbar-input">
+				<input type="search" placeholder="搜索" />
+				<a href="#" class="searchbar-clear"></a>
+			</div>
+			<a href="#" class="searchbar-cancel">取消</a>
+		</form>
+		<div class="searchbar-overlay"></div>
+		<div class="page-content">
+			<div class="list-block searchbar-not-found">
+				<ul>
+					<li class="item-content">
+						<div class="item-inner">
+							<div class="item-title">Nothing found</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<input type="hidden" id="resultId" />
+			<div class="list-block search-here searchbar-found" id="contractManageId">
+				<ul></ul>
+			</div>
+		</div>
+	</div>
+</div>

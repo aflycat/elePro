@@ -1,0 +1,84 @@
+<div class="navbar">
+	<div class="navbar-inner">
+
+		<div class="left">
+			<a href="#" class="link back icon-only">
+				<i class="icon iconfont icon-web-back"></i>
+			</a>
+		</div>
+		<div class="center sliding">新建任务</div>
+		<div class="right">
+		</div>
+	</div>
+</div>
+<div class="pages">
+	<div data-page="newTask" class="page" id="newTask">
+		<div class="page-content createTask" style="display: block;">
+    		<input id="taskId" type="hidden" >
+    		<!-- 任务id -->
+			<input id="taskType" type="hidden" >
+			<!-- 物业还是维保 -->
+			<input id="peoId" type="hidden">
+			<!-- 维保人员 -->
+			<input id="eqpeoId" type="hidden">
+			<!-- 维保设备id -->
+			
+			<input id="creatId" type="hidden">
+			<!-- 创建人序号 -->
+			<input id="wyIdNe" type="hidden">
+			<!-- 物业公司id -->
+			<div class="itemWrap list-block">
+				
+                <div class="proContent" style="height:4rem;">
+                    <p class="tit">任务开始时间</p>
+                    <div class="date">
+						  <input readonly id="dateCho" type="text" value="" style="width: 100%;height: 100%;">
+                    </div>
+                    <div class="time"> 
+                    	<input id="timeCho" type="text" value="" style="width: 100%;height: 100%;padding-left: 0.5rem;">
+                    </div>
+                </div>
+                <div class="proContent mem" style="z-index: 20;">
+						<p class="tit">选择人员</p>
+						<div class="menu" onclick="checkpeo(this)">
+							<span>请选择</span>
+							<i class="icon iconfont icon-web-triangle-bottom" id="checkPro" ></i>
+						</div>
+						<ul class="list-block  proList peo "></ul>
+				</div>
+				<div class="proContent task"  style="z-index: 16;">
+					<p class="tit">任务类型选择</p>
+					<div class="menu" onclick="checkpeo(this)">
+						<span>请选择</span>
+						<i class="icon iconfont icon-web-triangle-bottom" id="checkPro" ></i>
+					</div>
+					<ul class="proList taskType">
+						<li tyId="0" class="item-content" onclick="checkTakTyp(this)">
+							<div class="item-inner">
+								<div class="item-title">巡查任务</div>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="proContent taskCon">
+                    <p class="tit">任务内容</p>
+                    <div class="menu">
+                    	<input class="conTask" type="text">
+                    </div>
+                </div>
+                <div class="proContent">
+                    <p class="tit">任务备注</p>
+                    <div class="menu">
+                    	<input  class="remark" type="text">
+                    </div>
+                </div>
+				<div class="btn wb">
+					<p class="button button-fill button-big button-round" onclick="submitTsk()">确认</p>
+				</div>
+				
+		</div>
+	</div>
+</div>
+
+							

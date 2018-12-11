@@ -1,0 +1,232 @@
+/**
+ * by dengjingfei 2018-01-17
+ * https://raw.githubusercontent.com/18720989200/works/master/common.css
+ **/
+body, h1, h2, h3, h4, ul, ol, dl, dd, p {margin: 0;}
+ul, ol {padding: 0;}
+body {line-height: 1.4;color: #333;font-size: 12px;background: white;font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
+ol, ul {list-style: none;padding-left: 0px;} 
+table {border-collapse: collapse;border-spacing: 0;}
+a img,img {border: 0;}
+
+/* 文字排版、颜色 */
+.font12 {font-size: 12px;}
+.font13 {font-size: 13px;}
+.font14 {font-size: 14px;}
+.font16 {font-size: 16px;}
+.font20 {font-size: 20px;}
+.font-b {font-weight: bold;}
+.font-n {font-weight: normal;font-style: normal;}
+.font-i {font-style: italic;}
+.indent2 {text-indent: 2em;}
+
+/* 定位 */
+.align-l {text-align: left;}
+.align-r {text-align: right;}
+.align-c {text-align: center;}
+.align-j {text-align: justify;}
+.floatl {float: left;display: inline;}
+.floatr {float: right;display: inline;}
+.clear {clear: both;}
+.clearl {clear: left;}
+.clearr {clear: rigth;}
+.clearfix:after {clear: both;display: block;visibility: hidden;height: 0;content: ".";}
+
+/* 垂直对齐 */
+.valign-m {vertical-align: middle;}
+.valign-tb {vertical-align: text-bottom;}
+.valign-b {vertical-align: bottom;}
+.valign-t {vertical-align: top;}
+
+/* 定位 */
+.position-r {position: relative;}
+.position-a {position: absolute;}
+
+/* 显示隐藏 */
+.show {display: block;}
+.hide {display: none;}
+.visible {visiility: visible;}
+.hidden {visiility: hidden;}
+
+
+/* 长度高度 */
+.width10 {width: 10px;}
+.width20 {width: 20px;}
+.width30 {width: 30px;}
+.width40 {width: 40px;}
+.width50 {width: 50px;}
+.width60 {width: 60px;}
+.width70 {width: 70px;}
+.width80 {width: 80px;}
+.width90 {width: 90px;}
+.width100 {width: 100px;}
+.width200 {width: 200px;}
+.width300 {width: 300px;}
+.width400 {width: 400px;}
+.width500 {width: 500px;}
+.width600 {width: 600px;}
+.width700 {width: 700px;}
+.width800 {width: 800px;}
+.height50 {width: 50px;}
+.height80 {width: 80px;}
+.height100 {width: 100px;}
+.height200 {width: 200px;}
+
+/* 宽度百分比值 */
+.width-per10 {width: 10%;}
+.width-per15 {width: 15%;}
+.width-per20 {width: 20%;}
+.width-per25 {width: 25%;}
+.width-per30 {width: 30%;}
+.width-per33 {width: 33.3%;}
+.width-per40 {width: 40%;}
+.width-per45 {width: 45%;}
+.width-per50 {width: 50%;}
+.width-per55 {width: 55%;}
+.width-per60 {width: 60%;}
+.width-per66 {width: 66.6%;}
+.width-per70 {width: 70%;}
+.width-per75 {width: 75%;}
+.width-per80 {width: 80%;}
+.width-per90 {width: 90%;}
+.width-per100 {width: 100%;}
+
+
+/* 字体行高 */
+.line-h14 {line-height: 14px;}
+.line-h16 {line-height: 16px;}
+.line-h18 {line-height: 18px;}
+.line-h20 {line-height: 20px;}
+.line-h22 {line-height: 22px;}
+.line-h24 {line-height: 24px;}
+.line-h150 {line-height: 150%;}
+.line-h180 {line-height: 180%;}
+.line-h200 {line-height: 200%;}
+
+/* 边距 */
+.auto {margin:  auto;}
+.margin0 {margin: 0px;}
+.margin10 {margin: 10px;}
+.margin15 {margin: 15px;}
+.margin30 {margin: 30px;}
+.margin-t5 {margin-top: 5px;}
+.margin-t10 {margin-top: 10px;}
+.margin-t15 {margin-top: 15px;}
+.margin-t50 {margin-top: 50px;}
+.margin-t100 {margin-top: 100px;}
+.margin-b5 {margin-bottom: 5px;}
+.margin-b10 {margin-bottom: 10px;}
+.margin-b15 {margin-bottom: 15px;}
+.margin-b100 {margin-bottom: 100px;}
+.margin-l5 {margin-left: 5px;}
+.margin-l10 {margin-left: 10px;}
+.margin-l15 {margin-left: 15px;}
+.margin-l20 {margin-left: 20px;}
+.margin-l30 {margin-left: 30px;}
+.margin-l50 {margin-left: 50px;}
+.margin-l100 {margin-left: 100px;}
+.margin-r5 {margin-right: 5px;}
+.margin-r10 {margin-right: 10px;}
+.margin-r15 {margin-right: 15px;}
+.margin-r50 {margin-right: 50px;}
+.margin-r100 {margin-right: 100px;}
+.padd0 {padding: 0;}
+.padd10 {padding: 10px;}
+.padd15 {padding: 15px;}
+.padd30 {padding: 30px;}
+.padd-t5 {padding-top: 5px;}
+.padd-t10 {padding-top: 10px;}
+.padd-t15 {padding-top: 15px;}
+.padd-t20 {padding-top: 20px;}
+.padd-t30 {padding-top: 30px;}
+.padd-t50 {padding-top: 50px;}
+.padd-b5 {padding-bottom: 5px;}
+.padd-b100 {padding-bottom: 100px;}
+.padd-l5 {padding-left: 5px;}
+.padd-l10 {padding-left: 10px;}
+.padd-l50 {padding-left: 50px;}
+.padd-l100 {padding-left: 100px;}
+.padd-r5 {padding-right: 5px;}
+.padd-r10 {padding-right: 10px;}
+.padd-r15 {padding-right: 15px;}
+.padd-r100 {padding-right: 100px;}
+
+/* 边框 */
+.border0 {border: none;}
+.borderc {border:1px solid #ccc;}
+.borderd {border:1px solid #ddd;}
+.bordere {border:1px solid #eee;}
+
+/* 背景色 */
+.bg-color-ff {background-color: #fff;}
+.bg-color-fb {background-color: #fbfbfb;}
+.bg-color-f5 {background-color: #f5f5f5;}
+.bg-color-f0 {background-color: #f0f0f0;}
+.bg-color-eb {background-color: #ebebeb;}
+.bg-color-e0 {background-color: #e0e0e0;}
+.bg-color-blue {background-color: #2d8cf0;}
+
+/* 字体安全色 */
+.color0 {color: #000;}
+.color3 {color: #333;}
+.color6 {color: #666;}
+.color9 {color: #999;}
+.colorc {color: #ccc;}
+.colorf {color: white;}
+.red,a.red {color: #cc0031;}
+.darkblue,a.darkblue {color: #039;}
+.gray,a.gray {color: #878787;}
+
+/* 文本修饰 */
+.text-line {text-decoration: underline;}
+.text-none,.text-none:hover,.text-none a:hover,a.text-line:hover {text-decoration: none;}
+
+/* 字符间距 */
+.letter-1 {letter-spacing: -1px;}
+.letter1 {letter-spacing: 1px;}
+.letter3 {letter-spacing: 3px;}
+
+/* 文本不换行 */
+.nowrap {white-space: nowrap;}
+
+/* 文本换行 */
+.break-word {word-wrap: break-word;}
+
+/* z-index */
+.zindex1 {z-index: 1;}
+.zindex2 {z-index: 2;}
+
+/* 光标 */
+.cursor-p {cursor: pointer;}
+.cursor-d {cursor: default;}
+
+/* 溢出 */
+.over-hidden {overflow: hidden;}
+.over-auto {overflow: auto;}
+
+/* 元素是否可见 */
+.visibility-h {visibility: hidden;}
+.visibility-v {visibility: visible;}
+
+/* 基于display:table-cell的自适应布局 */
+.display-cell {display: table-cell;width: 2000px;*display: inline-block;*width: auto;}
+
+/* 单行文字溢出虚点显示 */
+.over-nowrap {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+/* css3过渡动画效果 */
+.trans-animation {-webkit-transition: all 0.3s;transition: all 0.3s;}
+
+/* 大小不定元素垂直居中 */
+.display-middle {display: inline-block;width: 0;height: 100%;vertical-align: middle;}
+
+/* 无框文本框/文本域 */
+.text-none {outline: none;border: 0;}
+
+/* 绝对定位隐藏 */
+.abs-out {position: absolute;top: -999em;left: -999em;}
+.abs-clip {position: absolute;clip: rect(0 0 0 0);}
+
+/* 按钮禁用 */
+.btn-disabled {outline: 0!important;border-color: #acacac!important;color: #acacac!important;text-shadow: 1px 1px #fff!important;cursor: default!important;pointer-events: none;}
+.btn-disabled:hover {text-decoration: none!important;}

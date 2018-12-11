@@ -1,0 +1,240 @@
+﻿<!-- 重点：on('featureClick' ， getClusterRecord -->
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <!-- 原始地址：//webapi.amap.com/ui/1.0/ui/geo/DistrictCluster/examples/plus-point-simplifier-click.html -->
+    <!--<base href="//webapi.amap.com/ui/1.0/ui/geo/DistrictCluster/examples/" />-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>点击后展示海量点</title>
+    <style>
+        html,
+        body,
+        #container {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+
+        #loadingTip {
+            position: absolute;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            padding: 3px 10px;
+            background: red;
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script type="text/javascript" src='//webapi.amap.com/maps?v=1.4.0&key=ce104a278e3425c984c0b21bee94aa9a'></script>
+    <!-- UI组件库 1.0 -->
+    <script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+    <script type="text/javascript">
+    //创建地图
+    var map = new AMap.Map('container', {
+        zoom: 4
+    });
+        var SZData;
+
+    function initPage(DistrictCluster, PointSimplifier, $) {
+
+        var pointSimplifierIns = new PointSimplifier({
+            map: map, //所属的地图实例
+            zIndex: 110,
+            autoSetFitView: false, //禁止自动更新地图视野
+            getPosition: function(item) {
+
+                return item.position;
+            },
+            getHoverTitle: function(dataItem, idx) {
+                return idx + ': ' + dataItem.dataItem;
+            },
+            renderOptions: {
+                //点的样式
+                pointStyle: {
+                    width: 6,
+                    height: 6,
+                    fillStyle: 'rgba(153, 0, 153, 0.38)'
+                },
+                //鼠标hover时的title信息
+                hoverTitleStyle: {
+                    position: 'top'
+                }
+            }
+        });
+
+        var distCluster = new DistrictCluster({
+            zIndex: 100,
+            map: map, //所属的地图实例
+
+            getPosition: function(item) {
+
+                if (!item) {
+                    return null;
+                }
+
+                var parts = item.split(',');
+
+                //返回经纬度
+                return [parseFloat(parts[0]), parseFloat(parts[1])];
+            }
+        });
+
+        var currentAdcode = null;
+
+        //监听区划面的点击
+        distCluster.on('featureClick', function(e, feature) {
+
+
+            currentAdcode = feature.properties.adcode;
+
+            //获取该节点的聚合信息
+            distCluster.getClusterRecord(currentAdcode, function(error, result) {
+
+                //currentAdcode已经更新，有新的点击
+                if (result.adcode !== 440306) {
+                    return;
+                }
+                console.log(result);
+                //AddDatatoSQl(result.dataItems);
+                //设置数据
+                pointSimplifierIns.setData(result.dataItems);
+            })
+        });
+
+        distCluster.on('renderFinish', function(e, result) {
+
+            var features = result.features, //当前绘制的features
+                currentAdcodeExists = false;
+
+            for (var i = 0, len = features.length; i < len; i++) {
+                if (currentAdcode === features[i].properties.adcode) {
+
+                    currentAdcodeExists = true;
+                    break;
+                }
+            }
+
+            if (!currentAdcodeExists) {
+                //如果当前adcode没有绘制，清除？
+                //pointSimplifierIns.setData(null);
+            }
+        });
+
+
+        window.distCluster = distCluster;
+
+        function refresh() {
+
+            var zoom = map.getZoom();
+
+            //获取 pointStyle
+            var pointStyle = pointSimplifierIns.getRenderOptions().pointStyle;
+
+            //根据当前zoom调整点的尺寸
+            pointStyle.width = pointStyle.height = 2 * Math.pow(1.2, map.getZoom() - 3);
+
+            // var zoom = map.getZoom();
+
+            // if (zoom < 10) {
+
+            //     pointSimplifierIns.hide();
+
+            // } else {
+
+            //     pointSimplifierIns.show();
+            // }
+        }
+
+        map.on('zoomend', function() {
+            refresh();
+        });
+
+        refresh();
+
+        $('<div id="loadingTip">加载数据，请稍候...</div>').appendTo(document.body);
+        $.get('http://a.amap.com/amap-ui/static/data/10w.txt', function(csv) {
+
+            $('#loadingTip').remove();
+
+            var data = csv.split('\n');
+            
+            distCluster.setData(data);
+        });
+        }
+
+
+
+    function initEnsureReconnect(fun) {
+            $.ajax({
+                type: "post",
+                url: "/GWServices.asmx/GetName2SFService",
+                data: "userName=admin",
+                success: function (data) {
+                    var analyze = $(data).children("string").text();
+                    if (analyze != "" || analyze != "false") {
+                        console.log("重连成功！");
+                        reconnection = 0;
+                        if (fun != null) {
+                            fun();
+                        }
+                    }
+                    else {
+                        alert("重连第" + reconnection + "次");
+                        if (reconnection < 3) {
+                            reconnection++;
+                            initEnsureChonglian(GetMarkerList());
+                        }
+                        else {
+                            reconnection = 0;
+                            alert("连接服务失败,请检查服务是否正常")
+                        }
+                    }
+
+                }
+
+            });
+
+        }
+
+
+        function AddDatatoSQl(dt)
+        {
+            for (var i = 0; i < dt.length; i++) {
+                AddDataFromSQL(dt[i]);
+            }
+        }
+        function AddDataFromSQL(dt) {
+
+           // var data = dt.split(',');
+           // var sql = "Insert into GWElevatorMarker Values('DT" + dt.dataIndex + "', '" + dt.dataItem + "', '深圳市', " + "', '电梯信息', " + 0 + ")";
+            $.ajax({
+                type: "post",
+                url: "/GWServices.asmx/GetDataTableFromSQLSer",//Http://192.168.0.223:8088
+                async: false,
+                data: "sql=Insert into GWElevatorMarker Values('DT" + dt.dataIndex + "', '" + dt.dataItem + "', '深圳市','电梯信息'," + 0 + ")",
+                success: function (data) {
+                    console.log(data);
+
+                }
+            });
+
+        }
+
+    //加载相关组件
+    AMapUI.load(['ui/geo/DistrictCluster', 'ui/misc/PointSimplifier', 'lib/$'], function(DistrictCluster, PointSimplifier, $) {
+
+        //启动页面
+        initPage(DistrictCluster, PointSimplifier, $);
+        initEnsureReconnect();
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+﻿<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" class="link back icon-only">
+                <i class="iconfont icon-web-back"></i>
+            </a>
+        </div>
+        <div class="center sliding">任务评价确认</div>
+        <div class="right"></div>
+    </div>
+</div>
+<div class="pages">
+    <div data-page="appraise" class="page" id="appraise">
+        <div class="page-content">
+            <div class="contaiW">
+                
+                <div class="search">
+                    <input type="text" name="" id="searchInpEq" value="" placeholder="请输入任务编号或扫描二维码"/>
+                    <i class="icon iconfont icon-web-saomiao" onclick="myJavaFun.RichScan()"></i>
+                </div>
+                <input id="apraId" type="hidden">
+                <p class="tit">设备编号:</p>
+                    <div class="name">
+                        <input id="aEquiNum" class="nameVal" type="text" value="">
+                    </div>
+               <!--  <p class="tit">保单编号:</p>
+                    <div class="name">
+                        <input id="aSerialNum" class="nameVal" type="text" >
+                    </div>
+ -->
+                 <p class="tit appra">评级</p>
+                 <p class="rate appra">
+                    <i class="iconfont icon-xingxing"></i>
+                    <i class="iconfont icon-xingxing"></i>
+                    <i class="iconfont icon-xingxing"></i>
+                    <i class="iconfont icon-xingxing"></i>
+                    <i class="iconfont icon-xingxing"></i>
+                </p>
+                 <p class="tit appra">评价</p>
+                <textarea  name="" class="messDetail appra" id="messDetail" cols="" rows="" placeholder="请输入您对本次任务的评价，不超过100字" maxlength="100"></textarea>
+                <p class="tit">签名</p>
+                <div class="sign">
+                    <div id="myImg" class="imgWrap" onclick="letInput()">
+                    
+                    </div>
+                </div>
+                <div class="btn">
+                        <p class="button button-fill button-big button-round" >
+                                提交
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

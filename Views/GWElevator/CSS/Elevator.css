@@ -1,0 +1,255 @@
+﻿.searchbox {
+    width: 400px;
+    height: 45px;
+    position: absolute;
+    display: flex;
+    left: 20px;
+    top: 20px;
+    background-color: white;
+    border-radius: 2px;
+    border: 2px solid black
+}
+
+#searchipt {
+    position: absolute;
+    top: 12.5px;
+    left: 50px;
+    box-sizing: border-box;
+    text-indent: 2px;
+    z-index: 2200;
+    border: none;
+    width: 200px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+    letter-spacing: .5px;
+    font-size: 14px;
+    color: #565656;
+    outline: none
+}
+
+.searchbox .logo {
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    width: 34px;
+    height: 34px;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+.searchbox #searchbtn {
+    position: absolute;
+    right: 45px;
+    top: 0;
+    z-index: 9308;
+    box-sizing: border-box;
+    width: 45px;
+    height: 45px;
+}
+
+.searchbox .searchlogo {
+    position: absolute;
+    top: 8.5px;
+    right: 8px;
+    font-size: 19px;
+    color: #7c8196;
+    padding: 0 5px;
+}
+
+.searchbox #Backbtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9308;
+    box-sizing: border-box;
+    width: 45px;
+    height: 45px;
+}
+
+
+/*e62e*/
+.icon-search:before {
+    content: "\e608";
+}
+
+#searchbtn:hover {
+    background-color: aqua
+}
+
+#Backbtn:hover {
+    background-color: aquamarine
+}
+
+
+/*电梯图标信息框*/
+
+.elevator_main {
+    width: 265px;
+    height: 280px;
+    background: url("../Images/Popup.png");
+    background-size: 100% 100%;
+}
+
+
+.elevator_main2 {
+    width: 350px;
+    height: 350px;
+    background: url("../Images/Popup2.png");
+    background-size: 100% 100%;
+}
+
+.elevator_main ul {
+    list-style: none;
+    position: absolute;
+    /*height: 120px;*/
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    /*margin-top: 30px;*/
+}
+
+.li_main {
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    .li_main p {
+        flex:1;
+        color: white;
+        margin-left:20%;
+    }
+
+    .li_main img{
+        flex:0;
+        margin-left:10%;
+    }
+.dynPopupBtn {
+    position: absolute;
+    bottom: 55px;
+    left: 17px;
+    right: 17px;
+}
+
+    .dynPopupBtn a {
+        line-height: 26px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background: rgba(0,122,213,.7);
+        font-size: 12px;
+        width: 100%;
+        display: block;
+    }
+
+
+.actDynPopupTitle {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    width: 100%;
+    margin: 0;
+    line-height: 40px;
+    color: #fff;
+    white-space:nowrap;
+         text-overflow:ellipsis;overflow:hidden;
+}
+
+.actDynPopupContent {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    right: 10px;
+    bottom: 55px;
+}
+
+.actDynPopupContent .Content{
+    display:flex;
+    height:31px;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+    .actDynPopupContent .Content p{
+        font-size:14px;
+        color:white;
+         white-space:nowrap;
+         text-overflow:ellipsis;overflow:hidden;
+    }
+    .actDynPopupContent .Content p:last-child{
+    	width: 70%;
+    	float: right;
+    }
+    /**********************图例**************************************/
+    .legend {
+        min-width: 800px;
+        position: absolute;
+        left: 0%;
+        bottom: 2%;
+        z-index: 1;
+    }
+
+
+.legendul {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    bottom: 50%;
+    list-style:none;
+}
+
+    .legendul li {
+        width: 100%;
+        margin: 5% 20%;
+        /*text-align:center;*/
+    }
+
+        .legendul li a {
+            color: #51B2FF;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            padding: 0.25rem 0rem;
+            font-weight: 400;
+            font-size: 16px;
+            position: relative;
+            background: url(../Images/backgroundLink.png);
+            background-size: 100% 100%;
+            text-indent: 45%;
+            text-decoration: none
+        }
+
+
+            .legendul li a:hover {
+                cursor: default;
+            }
+
+
+.lengdendSpan {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    margin-top: -0.75rem;
+    display: inline-block;
+    left: 15%
+}
+
+
+.legendul li a.animation1 {
+    background: url(../Images/backgroundActive.png);
+    background-size: 100% 100%;
+    color: white;
+}
+
+.legendul li a.animation{
+    background: url(../Images/backgroundActive.png);
+    background-size: 100% 100%;
+    color: white;
+}

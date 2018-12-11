@@ -1,0 +1,78 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left">
+			<a href="#" class="link back icon-only">
+				<i class="iconfont icon-web-back"></i>
+			</a>
+		</div>
+		<div class="center sliding">报障</div>
+		<div class="right">
+			<a href="#" class="link icon-only open-panel"><i class="iconfont icon-caidan"></i></a>
+		</div>
+	</div>
+</div>
+<div class="pages">
+	<div data-page="PostPro" class="page" id="PostPro">
+		<div class="page-content">
+			<div class="contain">
+				<input type="hidden" id="trueId">
+				<div class="search">
+					<input type="text" name="" id="searchInp" value="" placeholder="请输入设备注册代码或扫描二维码" />
+					<i class="icon iconfont icon-web-saomiao" onclick="myJavaFun.RichScan()"></i>
+				</div>
+				<div class="proContent">
+					<p class="tit">故障内容</p>
+					<div class="menu" onclick="checkPro(this)">
+						<span>请选择</span>
+						<i class="icon iconfont icon-web-triangle-bottom" id="checkPro"></i>
+						<!-- icon-web-triangle-top -->
+					</div>
+					<ul class="proList">
+						<li>电梯没快车慢车</li>
+						<li>电梯轿厢到平层位臵不停车</li>
+						<li>电梯下行正常，上行无快车</li>
+						<li>轿厢运行到所选楼层不换速</li>
+						<li>电梯有慢车没快车</li>
+						<li>轿厢运行未到换速点突然换速停车</li>
+						<li>轿厢平层准确度误差过大</li>
+						<li>电梯运行时轿厢内有异常的噪声和振动</li>
+						<li>电梯运行时轿厢内有异常的振动</li>
+						<li>选层记忆并关门后电梯不能启动运行</li>
+						<li>电梯启动困难或运行速度明显降低</li>
+						<li>开门、关门过程中门扇抖动、有卡阻现象</li>
+					</ul>
+				</div>
+				<textarea name="" class="messDetail" id="messDetail" cols="" rows="" placeholder="请详细描述您遇到的问题，不超过100字"></textarea>
+				<div class="upPhoto">
+					<p class="tit">上传照片</p>
+					<div class="imgBox">
+						<span>+</span>
+						<!-- <img id="upImg" > -->
+						<input id="imgUp" accept="image/*" type="file">
+					</div>
+				</div>
+				<div class="connect">
+					<p class="tit">请留下您的联系方式，以便与您联系</p>
+					<div class="name">
+						<span>姓名:</span>
+						<input class="nameVal" type="text">
+					</div>
+
+					<div class="tel">
+						<span>电话:</span>
+						<input class="telVal" type="text">
+					</div>
+				</div>
+				<div class="postUp">
+					<div class="row">
+						<p class="postBtn" onclick=" upLoadPro()">
+							提交
+						</p>
+					</div>
+				</div>
+				<div style="height: 44px;">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

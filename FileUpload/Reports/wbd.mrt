@@ -1,0 +1,1441 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="2">
+      <Table1 Ref="2" type="DataTableSource" isKey="true">
+        <Alias>Table1</Alias>
+        <Columns isList="true" count="19">
+          <value>SerialNum,System.String</value>
+          <value>MaintTime,System.DateTime</value>
+          <value>EquipNum,System.String</value>
+          <value>PropCo,System.String</value>
+          <value>MaintCo,System.String</value>
+          <value>NotTime,System.DateTime</value>
+          <value>StartTime,System.DateTime</value>
+          <value>EndTime,System.DateTime</value>
+          <value>Type1,System.Int32</value>
+          <value>Type2,System.Int32</value>
+          <value>Type3,System.Int32</value>
+          <value>Fault,System.String</value>
+          <value>Process,System.String</value>
+          <value>Remark,System.String</value>
+          <value>PropOp,System.String</value>
+          <value>PropSign,System.String</value>
+          <value>MaintSign,System.String</value>
+          <value>Pic,System.String</value>
+          <value>Type,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Table1</Name>
+        <NameInSource>DataSource.Table1</NameInSource>
+      </Table1>
+      <Table2 Ref="3" type="DataTableSource" isKey="true">
+        <Alias>Table2</Alias>
+        <Columns isList="true" count="5">
+          <value>Index,System.Int32</value>
+          <value>ItemType,System.Int32</value>
+          <value>ItemName,System.String</value>
+          <value>Content,System.String</value>
+          <value>Result,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Table2</Name>
+        <NameInSource>DataSource.Table2</NameInSource>
+      </Table2>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="7">
+        <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,1</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text1 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,12</Font>
+              <Guid>c4a8a9d651134bf6b06e2065c6347d80</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>电梯日常维修保养记录单</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15,0.6,4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>bcd7910c331c4d469ed7eca33f45c331</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{Table1.SerialNum}</Text>
+              <TextBrush>[255:0:0]</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text3 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,0.6,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>62839f4c77764e258503ca5161ebd938</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>编号：NO</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageHeaderBand1>
+        <ReportTitleBand1 Ref="9" type="ReportTitleBand" isKey="true">
+          <Border>All;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.2,19,2.6</ClientRectangle>
+          <Components isList="true" count="41">
+            <Text4 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0.2,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>c169db54c00a452ab300a54a9249042b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>使用单位：</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text8 Ref="11" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.4,0.2,6.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>73e7270013b2430c9a08aebfaf4f1a53</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.PropCo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text12 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,0.2,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>57d4178d2068428a8855f2a901c839d8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>日    期：</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text14 Ref="13" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0.2,1.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>aebf932bed674196907bbc325427dff2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.NotTime}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="14" type="CustomFormat" isKey="true">
+                <StringFormat>yyyy</StringFormat>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text36 Ref="15" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.4,0.2,1.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>8be2a2decf254f838746b84c2c68995d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.NotTime}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="16" type="CustomFormat" isKey="true">
+                <StringFormat>MM</StringFormat>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+            <Text37 Ref="17" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.4,0.2,1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>ad5e1c9e599940839d1414f6ab0a85f3</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.NotTime}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="18" type="CustomFormat" isKey="true">
+                <StringFormat>dd</StringFormat>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+            <Text38 Ref="19" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.6,0.2,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>3d2f5e5d2edf48d7bb3dcc0e72e278f4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>年</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text38>
+            <Text39 Ref="20" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,0.2,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>89f94b4b10f54812a0976c20efcb8955</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>日</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text40 Ref="21" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.6,0.2,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>2da59db229424244aac05ab25de9fb2a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>月</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text40>
+            <Text41 Ref="22" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>18.2,0.2,0.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>d3722de7051d4df09855b53701046088</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text5 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0.8,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>0b64d7f477d04c73afd1c2a42c301e13</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>维保单位：</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text9 Ref="24" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.4,0.8,6.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>6094e3a8bb984028a36dcf4a321d3fb0</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.MaintCo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text13 Ref="25" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,0.8,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>dcf5d55977544cb785de717df4f6a7ed</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>电梯编号：</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text15 Ref="26" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0.8,6.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>4875835da9c646448d495a26d290e9af</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.EquipNum}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text6 Ref="27" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,1.4,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>d3f61321085f459c924385c366440a52</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>通知时间：</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text16 Ref="28" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.8,1.4,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>a95d40f89c1d4140b36dbe374ee0467b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>结束时间：</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text17 Ref="29" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.8,1.4,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>80c02c4b350b47b78022a0dac3cdd4bb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.EndTime}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="30" type="CustomFormat" isKey="true">
+                <StringFormat>MM</StringFormat>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <Text18 Ref="31" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.6,1.4,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>474f28cff6364664b443f5763f4bcff5</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>到达时间：</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text10 Ref="32" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.4,1.4,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>00a8a6ede7a748449fd8bb1ffc65b8e3</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.NotTime}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="33" type="CustomFormat" isKey="true">
+                <StringFormat>HH</StringFormat>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text19 Ref="34" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,1.4,0.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>215202406a9d48efaee26af14c6f44a2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>时</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="35" type="CustomFormat" isKey="true">
+                <StringFormat>HH</StringFormat>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text23 Ref="36" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.8,1.4,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>6a4f9ea29c244c1fbedae86264744f4d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.NotTime}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="37" type="CustomFormat" isKey="true">
+                <StringFormat>mm</StringFormat>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text24 Ref="38" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,1.4,0.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>8d4af3d7e49c427f9a6e1f1834cde1ec</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>分</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text25 Ref="39" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.6,1.4,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>9fc16b58bcee466fa7cb7a4731ec93dd</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.StartTime}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="40" type="CustomFormat" isKey="true">
+                <StringFormat>HH</StringFormat>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text26 Ref="41" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.4,1.4,0.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>515939227542498fbe896e2ff3a66b6c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>时</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text27 Ref="42" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9,1.4,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>56236af0d75b40858e85f22086c95e70</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.StartTime}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="43" type="CustomFormat" isKey="true">
+                <StringFormat>mm</StringFormat>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text28 Ref="44" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.8,1.4,0.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>14478d9fe0374390ba35f4dff2d08def</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>分</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text29 Ref="45" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.4,1.4,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>52400c9b9d954a1ea8f5258c69f13370</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.EndTime}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="46" type="CustomFormat" isKey="true">
+                <StringFormat>dd</StringFormat>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Text30 Ref="47" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.8,1.4,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>52d2350c2ea9427f8826b72fcb1520ec</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.EndTime}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="48" type="CustomFormat" isKey="true">
+                <StringFormat>HH</StringFormat>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text31 Ref="49" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.2,1.4,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>26bf0ab6dfc34d83b672692fe293d624</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{Table1.EndTime}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="50" type="CustomFormat" isKey="true">
+                <StringFormat>mm</StringFormat>
+              </TextFormat>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text32 Ref="51" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.6,1.4,0.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>27196ee0017e4422ab2a5d602bc6862c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>月</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text33 Ref="52" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.2,1.4,0.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>ed4d81efa3d64dad896fbfa93c1347b8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>日</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+            <Text34 Ref="53" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.6,1.4,0.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>76e33a1662b842c59292f18175ed34b2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>时</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+            <Text35 Ref="54" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>18,1.4,0.6,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>13b22ff8537048f9ad3fb582e6650f5e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>分</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <Text7 Ref="55" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,2,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>ef94d8226dec4740a9de5fbc55d0c696</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>服务性质：</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text11 Ref="56" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.8,2,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>93d5387a5a1646f691d048394535c9e9</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>例行保养</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <CheckBox1 Ref="57" type="CheckBox" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <Checked>{Table1.Type1}</Checked>
+              <ClientRectangle>2.4,2,0.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <ContourColor>Black</ContourColor>
+              <Guid>4fc81432eb144fc2bfa28506b6534936</Guid>
+              <Name>CheckBox1</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <TextBrush>Black</TextBrush>
+              <Values>1/0</Values>
+            </CheckBox1>
+            <Text20 Ref="58" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,2,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>6e19f742c9a8423489d0f403775c0b25</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>维    修</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text21 Ref="59" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.2,2,2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>7e687361116b4d11a1c324b547a31e24</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>其    它</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text22 Ref="60" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.2,2,7.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,9</Font>
+              <Guid>5e1c659f713e436782f82126683f2548</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <CheckBox2 Ref="61" type="CheckBox" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <Checked>{Table1.Type2}</Checked>
+              <ClientRectangle>5.6,2,0.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <ContourColor>Black</ContourColor>
+              <Guid>455c458bea4140678fe06e41bb80173f</Guid>
+              <Name>CheckBox2</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <TextBrush>Black</TextBrush>
+              <Values>1/0</Values>
+            </CheckBox2>
+            <CheckBox3 Ref="62" type="CheckBox" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <Checked>{Table1.Type3}</Checked>
+              <ClientRectangle>8.8,2,0.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <ContourColor>Black</ContourColor>
+              <Guid>ad0fe79eb7d94147990941afdc833e9a</Guid>
+              <Name>CheckBox3</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <TextBrush>Black</TextBrush>
+              <Values>1/0</Values>
+            </CheckBox3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </ReportTitleBand1>
+        <ReportTitleBand2 Ref="63" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,5.6,19,1.2</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text43 Ref="64" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0.6,6.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新宋体,10</Font>
+              <Guid>641f862b3f2c43718c2b197c916ef919</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="4" />
+              <Parent isRef="63" />
+              <Text>维保项目</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="65" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.4,0.6,3.1,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新宋体,10</Font>
+              <Guid>bebb3f9e84a04c778a0bc890e65f923b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="4" />
+              <Parent isRef="63" />
+              <Text>维保结果
+</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+            <Text45 Ref="66" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.5,0.6,6.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新宋体,10</Font>
+              <Guid>8b32f664fbab4636b473f3132a32d3e8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="4" />
+              <Parent isRef="63" />
+              <Text>维保项目</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text45>
+            <Text46 Ref="67" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>15.9,0.6,3.1,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新宋体,10</Font>
+              <Guid>f7d6070589d64d488253b8893f7d170b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="4" />
+              <Parent isRef="63" />
+              <Text>维保结果</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text46>
+            <Text47 Ref="68" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0,6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="4" />
+              <Parent isRef="63" />
+              <Text>定期保养项目表：</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text47>
+            <Shape1 Ref="69" type="Shape" isKey="true">
+              <BorderColor>Black</BorderColor>
+              <Brush>[0:0:0]</Brush>
+              <ClientRectangle>0.2,0.2,0.2,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Name>Shape1</Name>
+              <Page isRef="4" />
+              <Parent isRef="63" />
+              <ShapeType Ref="70" type="Stimulsoft.Report.Components.ShapeTypes.StiRectangleShapeType" isKey="true" />
+            </Shape1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitleBand2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </ReportTitleBand2>
+        <GroupHeaderBand1 Ref="71" type="GroupHeaderBand" isKey="true">
+          <Border>All;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,7.6,19,0.4</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text42 Ref="72" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.6,0,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="4" />
+              <Parent isRef="71" />
+              <Text>{Table2.ItemName}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+            <Text48 Ref="73" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.4,0,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10,Bold</Font>
+              <Guid>e90efdb0545440c394243e41e5d6b97e</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="4" />
+              <Parent isRef="71" />
+              <Text>维护保养项目</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text48>
+          </Components>
+          <Condition>{Table2.ItemType}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupHeaderBand1>
+        <DataTable2 Ref="74" type="DataBand" isKey="true">
+          <Border>All;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,8.8,19,0.4</ClientRectangle>
+          <ColumnDirection>DownThenAcross</ColumnDirection>
+          <Columns>2</Columns>
+          <Components isList="true" count="2">
+            <DataTable2_Content Ref="75" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,6.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新宋体,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTable2_Content</Name>
+              <Page isRef="4" />
+              <Parent isRef="74" />
+              <Text>{Table2.Content}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </DataTable2_Content>
+            <DataTable2_Result Ref="76" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.4,0,3.1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>新宋体,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTable2_Result</Name>
+              <Page isRef="4" />
+              <Parent isRef="74" />
+              <Text>{Table2.Result}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataTable2_Result>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>Table2</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataTable2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="2">
+            <value>ASC</value>
+            <value>Index</value>
+          </Sort>
+        </DataTable2>
+        <GroupFooterBand1 Ref="77" type="GroupFooterBand" isKey="true">
+          <Border>All;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,10,19,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupFooterBand1>
+        <FooterBand1 Ref="78" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,10.8,19,6.8</ClientRectangle>
+          <Components isList="true" count="21">
+            <Text49 Ref="79" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0,6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10,Bold</Font>
+              <Guid>856ad7200c8e4a63832ba1cdc54fc377</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text49</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>维修记录表：</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text49>
+            <Shape2 Ref="80" type="Shape" isKey="true">
+              <BorderColor>Black</BorderColor>
+              <Brush>[0:0:0]</Brush>
+              <ClientRectangle>0.2,0.2,0.2,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>c1e7d68c710640038e607fa8a068375f</Guid>
+              <Name>Shape2</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <ShapeType Ref="81" type="Stimulsoft.Report.Components.ShapeTypes.StiRectangleShapeType" isKey="true" />
+            </Shape2>
+            <Text50 Ref="82" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.6,3.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>故障现象</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text50>
+            <Text51 Ref="83" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,3.4,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,9</Font>
+              <Guid>587c4caf83844cd2b3c351618827cb6f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text> 处理过程和结果（较详细的阐明解除故障的动作，设计更换配件的尽可能列出备件的型号）</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text51>
+            <Text52 Ref="84" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.8,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,9</Font>
+              <Guid>f02bf4e8654b4d8c87ec76d062337c13</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>更换配件报价单编号：</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text52>
+            <Text53 Ref="85" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,2.8,6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,9</Font>
+              <Guid>58476de30de14d4ebdb512fbc483d51e</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text53</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text53>
+            <Text54 Ref="86" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.2,2.8,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,9</Font>
+              <Guid>099e72eec6ce4504975c1bacf54686f0</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text54</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>送货单号码：</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text54>
+            <Text55 Ref="87" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.2,2.8,7.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,9</Font>
+              <Guid>1ebb30476db849348e2bb0128a0bfe70</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text55</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text55>
+            <Text56 Ref="88" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.4,1.2,15.6,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,9</Font>
+              <Guid>204133bcd6814d808706aa0605054026</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text56</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>{Table1.Process}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text56>
+            <Text57 Ref="89" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.4,0.6,15.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,9</Font>
+              <Guid>13cc153a51bc4bb2b2b6033f20709378</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text57</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>{Table1.Fault}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text57>
+            <Text58 Ref="90" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,3.4,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10,Bold</Font>
+              <Guid>800e6e5a637c4b1eafb807e5c4547c65</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text58</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>其它记录或备注：</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text58>
+            <Shape3 Ref="91" type="Shape" isKey="true">
+              <BorderColor>Black</BorderColor>
+              <Brush>[0:0:0]</Brush>
+              <ClientRectangle>0.2,3.6,0.2,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>f22d162e4b6845659371a832e4da7e2a</Guid>
+              <Name>Shape3</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <ShapeType Ref="92" type="Stimulsoft.Report.Components.ShapeTypes.StiRectangleShapeType" isKey="true" />
+            </Shape3>
+            <Text59 Ref="93" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,3.4,15.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>c47d245d3cb9434fb320dc9b2d4d7052</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text59</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>{Table1.Remark}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text59>
+            <Text60 Ref="94" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,4,18.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>acd307dc6b6d4b55b2eda7b64696ed07</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text60</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text60>
+            <Text61 Ref="95" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,4.6,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>4e913b3f5ebe470bba58666cba3166ba</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text61</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>使用单位意见：</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text61>
+            <Text62 Ref="96" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,4.6,15.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>201abafab9ad4edf9c068b753198f865</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text62</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>{Table1.PropOp}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text62>
+            <Text63 Ref="97" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,5.2,15.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>09cbec16978a485283072abef4615566</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text63</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text63>
+            <Text64 Ref="98" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,6,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>e286300f4ad8455aa5f4b148eb2cf962</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text64</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>维保单位意见：</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text64>
+            <Text65 Ref="99" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,6,6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>14d05d6cc0fc413f811d48461134cdbf</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text65</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>{Table1.MaintSign}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text65>
+            <Text66 Ref="100" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.6,6,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>08505066e7664450ae40cb4d6873dec2</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text66</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>使用单位意见：</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text66>
+            <Text67 Ref="101" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.4,6,6.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>宋体,10</Font>
+              <Guid>11f3ee10e73349be986b7c07230abe0f</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text67</Name>
+              <Page isRef="4" />
+              <Parent isRef="78" />
+              <Text>{Table1.PropSign}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text67>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>FooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </FooterBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>6fb6444a882645ce8abb17bf378c5831</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="102" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="103" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>3/26/2018 5:58:02 PM</ReportChanged>
+  <ReportCreated>3/23/2018 3:26:00 PM</ReportCreated>
+  <ReportFile>D:\AlarmCenter\bin\..\AddIns\AddIns\AlarmCenter\Extention\GWReport\ReportFile\Reports\wbd.mrt</ReportFile>
+  <ReportGuid>7e8b4bc5cf5f45cf97cf91c408354686</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2013.1.1600</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

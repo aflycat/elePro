@@ -1,0 +1,113 @@
+#postDeal  ul{margin-bottom: 20px;}
+
+
+#postDeal .list-block ul li .item-inner{
+	min-height:50px;
+}
+
+#postDeal .itemHead{
+	color:#b8b8b8;
+}
+
+#postDeal .proContent{
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index:10;
+	background: #fff;
+	padding-bottom: 1rem;
+	clear:both;
+	/*overflow: hidden;*/
+}
+#postDeal .proContent .tit{
+	font-size: 0.8rem;
+	color:#515151;
+	font-weight: bold;
+	letter-spacing: 2px;
+	width: auto;
+	padding-top:10px;
+	padding-left: 15px;
+	margin:0 0 0.5em 0;
+}
+#postDeal .proContent .menu{
+	width: 88%;
+	height: 2rem;
+	line-height: 2rem;
+	background: #f7f7f9;
+	margin: 0 1rem;
+	color: #666;
+	padding-left: 4%;
+}
+#postDeal .proContent .date{
+	width:35%;
+	float: left;
+	margin-right: 1rem;
+	color: #666;
+	height: 2rem;
+	margin: 0 1rem;
+	background: #f7f7f9;
+	line-height: 2rem;
+	text-align: left;
+	padding-left: 4%;
+}
+#postDeal .proContent .time{
+	width: 20%;
+	float: left;
+	line-height: 2rem;
+	height: 2rem;
+	color: #666;
+	background: #f7f7f9;
+	text-align: center;
+}
+#postDeal .proContent .menu input{
+	height: 100%;
+	color: #666;
+}
+#postDeal .proContent .menu span{
+	float: left;
+	font-size: 16px;
+}
+#postDeal .proContent .menu i{
+	float: right;
+	margin-right: 3%;
+	font-size: 0.8rem !important;
+}
+#postDeal .proContent .proList{
+	position: absolute;
+	width:88%;
+	min-height:50px;
+	max-height:200px;
+	line-height: 2rem;
+	background: #f7f7f9;
+	margin: 0 1rem;
+	color:#959595 ;
+	padding-left: 4%;
+	overflow: hidden;
+	overflow-y: scroll;
+	display: none;
+}
+#postDeal .proContent .proList li{
+	height:50px;
+	padding-left: 0;
+}
+#postDeal .proContent .proList li label{
+	padding-left: 0;
+	/*height: 100%;*/
+}
+#postDeal .proContent .proList li .peoDet{
+	width:100%;
+}
+#postDeal .proContent .proList li .peoDet .name{
+	width:50%;
+	display: inline-block;
+}
+#postDeal   .btn{
+	width:100%;
+	height: auto;
+	background: #fff;
+	overflow: hidden;
+}
+#postDeal  .btn p{
+	margin: 2rem auto;
+	width: 60%;
+}

@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ElevatorWebApi</name>
+    </assembly>
+    <members>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_userInfo(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            获取用户的描述信息
+            </summary>
+            <param name="jb">
+             name 用户名
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_mtps(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据公司序号获取所有维保人员的所有信息
+            </summary>
+            <param name="jb">
+             propId 公司序号
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.set_dtFault(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            提交电梯报障信息
+            </summary>
+            <param name="jb">
+            EquipId 设备序列号
+            Submitter 提交人姓名
+            Tel 提交人联系方式
+            Content 提交内容
+            Remark 提交说明
+            SubmitTime 提交时间
+            Pic 图片存放路径
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.set_dtComplaint(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            提交投诉信息
+            </summary>
+            <param name="jb">
+            EquipId 设备序列号
+            Submitter 提交人姓名
+            Tel 提交人联系方式
+            Content 提交内容
+            Remark 提交说明
+            SubmitTime 提交时间
+            Pic 图片存放路径
+            </param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtUserPoistion(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            实时更新用户定位
+            </summary>
+            <param name="jb">
+            Id 用户Id
+            myLongitude 经度
+            myLatitude 纬度
+            accountType 用户类型
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtAccount(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据用户名获取账号关系信息
+            </summary>
+            <param name="jb">
+            userName 用户名
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtTableDataByName(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据表名和编码获取表所有信息
+            </summary>
+            <param name="jb">
+            Id 编码
+            tableName 用户名
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtPinfor(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据人员id和人员类型获取人员信息
+            </summary>
+            <param name="jb">
+            Id 人员Id
+            Type 人员类型 0维保 1物业 2政府
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtPnameinfor(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据人员id和人员类型获取人员信息及公司名称
+            </summary>
+            <param name="jb">
+            Id 人员Id
+            Type 人员类型 0维保 1物业 2政府
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtCompany(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据公司序号查询公司信息
+            </summary>
+            <param name="jb">
+            Id 公司序号
+            Type 公司类型 0维保 1物业
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtCompanyPerson(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据公司序号查询公司成员信息
+            </summary>
+            <param name="jb">
+            PropId 公司序号
+            Type 公司类型 0维保 1物业
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtElevatorDetail(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据电梯序号查询电梯详细信息
+            </summary>
+            <param name="jb">
+            Id 公司序号
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtComplainList(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据时间周期查询投诉信息
+            </summary>
+            <param name="jb">
+            tableData 表名称
+            beginTime 开始时间
+            endTime 结束时间
+            CompId  所属公司序号
+            accountType 账户类型（维保、物业及政府）
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtTaskDataList(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据时间周期查询任务信息
+            </summary>
+            <param name="jb">
+            tableData 表名称
+            beginTime 开始时间
+            endTime 结束时间
+            CompId  所属公司序号
+            MaintPplId 受理人序号
+            accountType 账户类型（维保、物业及政府）
+            userType 角色类型（管理员，普通人员）
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtElevatorStatus(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据权限获取电梯状态统计信息
+            </summary>
+            <param name="jb">
+            MaintId  维保公司序号
+            PropId 物业公司序号
+            accountType 账户类型（维保、物业及政府）
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtReportData(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据权限获取报事统计信息
+            </summary>
+            <param name="jb">
+            MaintId  维保公司序号
+            PropId 物业公司序号
+            accountType 账户类型（维保、物业及政府）
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtReportMonthData(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据权限获取近一个月报事数量信息
+            </summary>
+            <param name="jb">
+            MaintId  维保公司序号
+            PropId 物业公司序号
+            accountType 账户类型（维保、物业及政府）
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtElevatorDataById(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据电梯状态获取电梯分布位置信息
+            </summary>
+            <param name="jb">
+            MaintId  维保公司序号
+            PropId 物业公司序号
+            accountType 账户类型（维保、物业及政府）
+            elevatorType 电梯状态 0-全部电梯 1-报障电梯 2-投诉电梯 3-合同将到期电梯
+                                  4-定检将到期电梯 5-合同过期电梯 6-定检过期电梯
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtCompanyMap(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据权限获取公司分布位置信息
+            </summary>
+            <param name="jb">
+            MaintId  维保公司序号
+            accountType 账户类型（维保、物业及政府）
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtPersonMap(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据权限获取人员分布位置信息
+            </summary>
+            <param name="jb">
+            MaintId  维保公司序号
+            accountType 账户类型（维保、物业及政府）
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtElevatorMap(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据权限获取电梯分布位置信息
+            </summary>
+            <param name="jb">
+            MaintId  维保公司序号
+            PropId 物业公司序号
+            accountType 账户类型（维保、物业及政府）
+            elevatorType 电梯状态 0-全部电梯 1-报障电梯 2-投诉电梯 3-合同将到期电梯
+                                  4-定检将到期电梯 5-合同过期电梯 6-定检过期电梯
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtTaskSituation(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据权限获取任务完成信息
+            </summary>
+            <param name="jb">
+            MpId  维保人序号
+            PpId 巡查人序号
+            accountType 账户类型（维保、物业及政府）
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtDocumentDetail(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据编码获取知识库详细信息
+            </summary>
+            <param name="jb">
+            Id 编码
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtDocument(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据个数获取知识库信息
+            </summary>
+            <param name="jb">
+            num 个数
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.getFileNameByRandom">
+            <summary>
+            根据时间周期查询任务信息
+            </summary>
+            <param name="jb">
+            tableData 表名称
+            beginTime 开始时间
+            endTime 结束时间
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.get_dtDocumentFilet(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据知识库信息下载相应文件
+            </summary>
+            <param name="jb">
+            Id 编码
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.WordToHtml(Newtonsoft.Json.Linq.JObject)">
+            <summary>  
+             word 转换为html  
+            </summary>  
+            <param name="jb">
+            path 要转换的文档的路径
+            savePath 转换成的html的保存路径
+            wordFileName 转换后html文件的名字
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.ConvertWordToHtml(Newtonsoft.Json.Linq.JObject)">
+            <summary>  
+             word 转换为html  
+            </summary>  
+            <param name="jb">
+            path 要转换的文档的路径
+            savePath 转换成的html的保存路径
+            wordFileName 转换后html文件的名字
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.ElevatorController.GetPathByXlsToHTML(Newtonsoft.Json.Linq.JObject)">
+            <summary>  
+             excel 转换为html  
+            </summary>  
+            <param name="jb">
+            strFile 要转换的文档的路径
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:ElevatorWebApi.WebService1">
+            <summary>
+            WebService1 的摘要说明
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,45 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left">
+			<a href="#" class="link back icon-only">
+				<i class="iconfont icon-web-back"></i>
+			</a>
+		</div>
+		<div class="center sliding">电梯信息</div>
+	</div>
+</div>
+<div class="pages">
+	<div data-page="statistic_elevator_detail" class="page" id="statistic_elevator_detail">
+		<input type="hidden" id="newElevatorYlLiId" />
+		<form data-search-list=".search-here" data-search-in=".item-title" class="searchbar searchbar-init">
+			<div class="searchbar-input">
+				<input type="search" placeholder="搜索" />
+				<a href="#" class="searchbar-clear"></a>
+			</div>
+			<a href="#" class="searchbar-cancel">取消</a>
+		</form>
+		<div class="searchbar-overlay"></div>
+		<div class="page-content">
+			<div class="main bg-color-f88a">
+				<div class="list-block searchbar-not-found">
+					<ul>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title">Nothing found</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="complain-list search-here searchbar-found" style="height: 100%;" id="elevatorDetailListId">
+					<input type="hidden" id="elevatorId" />
+					<ul>
+
+					</ul>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

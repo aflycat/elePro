@@ -1,0 +1,114 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+    <!-- 原始地址：//webapi.amap.com/ui/1.0/ui/geo/DistrictCluster/examples/plus-point-simplifier.html -->
+    <!--  <base href="//webapi.amap.com/ui/1.0/ui/geo/DistrictCluster/examples/" />-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>电梯分布图</title>
+    <link rel="stylesheet" href="../CSS/Elevator.css" />
+    <link rel="stylesheet" href="../fonts/iconfont.css" />
+    <link rel="stylesheet" href="../CSS/Marker.css" />
+    <style>
+        html,
+        body,
+        #container {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+
+        #loadingTip {
+            position: absolute;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            padding: 3px 10px;
+            background: red;
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <template id="Elevator">
+        <div class="elevator_main">
+            <p class="actDynPopupTitle">{{Name}}</p>
+            <div class="actDynPopupContent">
+                <ul>
+                    <li v-for="item in Elevators">
+                        <div class="li_main">
+                            <img :src="item.url" />
+                            <p>{{item.name}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </template>
+    <template id="Maintain">
+        <div class="elevator_main2">
+            <p class="actDynPopupTitle">{{Name}}</p>
+            <div class="actDynPopupContent">
+                <div class="Content">
+                    <p>电梯所在地名称：</p>
+                    <p>{{PlaceName}}</p>
+                </div>
+                <div class="Content">
+                    <p>地址位置：</p>
+                    <p>{{PlaceAdress}}</p>
+                </div>
+                <div class="Content">
+                    <p>维保公司：</p>
+                    <p>{{MaintainBusiness}}</p>
+                </div>
+                <div class="Content">
+                    <p>维保代表及电话：</p>
+                    <p>{{MaintainPhone}}</p>
+                </div>
+                <div class="Content">
+                    <p>使用单位：</p>
+                    <p>{{UseBusiness}}</p>
+                </div>
+                <div class="Content">
+                    <p>安全员及电话：</p>
+                    <p>{{SafterName}}</p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="Maintainer">
+        <div class="elevator_main">
+            <p class="actDynPopupTitle">{{Name}}</p>
+            <div class="actDynPopupContent">
+                <div class="Content">
+                    <p>当前所属维保公司：</p>
+                    <p>{{Maintain}}</p>
+                </div>
+                <div class="Content">
+                    <p>证件有效：</p>
+                    <p>{{Paperwork}}</p>
+                </div>
+                <div class="Content">
+                    <p>特种作业操作证号：</p>
+                    <p>{{PaperworkID}}</p>
+                </div>
+                <div class="Content">
+                    <p>联系电话：</p>
+                    <p>{{Phone}}</p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script type="text/javascript" src='//webapi.amap.com/maps?v=1.4.0&key=ce104a278e3425c984c0b21bee94aa9a'></script>
+    <!-- UI组件库 1.0 -->
+    <script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+    <script src="../JS/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/plug/jquery.signalR-2.1.2.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="../JS/vue.js"></script>
+    <script src="../JS/ElevatorInfo2.js"></script>
+</body>
+</html>

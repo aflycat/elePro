@@ -1,0 +1,32 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left">
+			<a href="#" onclick="loadInform('Order By a.PlanStart  Desc')">
+				全部
+			</a>
+		</div>
+		<div class="center sliding">任务列表</div>
+		<div id="createTas" class="right" onclick="loadNewTsak()">
+			<!-- <a href="newTask.html" class="link icon-only "> -->
+				<i class="icon iconfont icon-web-append"></i>
+			<!-- </a> -->
+		</div>
+	</div>
+</div>
+<div class="pages">
+	<div data-page="taskList" class="page" id="taskList">
+		<p class="dateChoo">
+				<input type="text" readonly value="请选择日期" id="dateCho2">
+			</p>
+			<input type="hidden" id="recordPoitionLng" />
+		<div class="page-content taskList  pull-to-refresh-content" data-ptr-distance="55" >
+			<div class="pull-to-refresh-layer">
+		      	<div class="preloader"></div>
+		      	<div class="pull-to-refresh-arrow"></div>
+		    </div>
+
+			<div class="list" style="padding-top: 2rem;">
+			</div>
+		</div>
+	</div>
+</div>

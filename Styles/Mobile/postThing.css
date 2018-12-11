@@ -1,0 +1,416 @@
+
+#PostThing{
+	background: #f9f9fb;
+}
+
+#PostThing .mid{
+	width: 60%;
+	height:30%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -30%;
+	margin-left: -30%;
+}
+#PostThing .mid .postPro,#PostThing .mid .postMes{
+	width: 100%;
+	height:3rem;
+	border-radius: 2rem;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1rem;
+	background: #fff;
+	font-weight: bold;
+	margin-top: 15%;
+	color: #3f3d3e;
+	box-shadow: 10px 10px 5px #e5e6e8;
+}
+#PostThing .mid .postPro i,#PostThing .mid .postMes i{
+	font-size: 25px !important;
+	font-weight: normal;
+	width: 3rem;
+}
+#PostThing .noright{
+	text-align: center;
+	margin-top:40%;
+	color:#666;
+	display: none;
+}
+#PostThing .noright i{
+	font-size: 6rem !important;
+	
+}
+#PostThing .noright p{
+	font-size: 1.2rem;
+	margin-top: 0;
+}
+/*报障*/
+#PostPro {
+	background: #f9f9fb;
+	/*background: #3498db;*/
+
+}
+#PostPro .contain{
+	width: 95%;
+	height: auto;
+	background: #fff;
+	margin:2.5% auto;
+
+}
+#PostPro .search{
+	width: 100%;
+	height:2.5rem;
+	background: #fff;
+	
+	line-height:2.5rem ;
+
+}
+#PostPro .search input{
+	width: 76%;
+	height: 1.6rem;
+	background: #f7f7f9;
+	border-radius: 1rem;
+	outline: none;
+	border: none;
+	line-height: 1.6rem;
+	padding-left: 1rem;
+	margin-left: 0.5rem;
+}
+#PostPro .search i{
+	font-size: 1.6rem !important;
+	margin-left:0.8rem;
+	color: #228afe;
+}
+#PostPro .proContent{
+	width: 100%;`
+	height: 15%;
+	position: relative;
+	z-index:10;
+}
+#PostPro .proContent .tit{
+	font-size: 0.8rem;
+	color:#515151;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-left: 0.5rem;
+	width: auto;
+}
+#PostPro .proContent .menu{
+	width: 90%;
+	height: 2rem;
+	line-height: 2rem;
+	background: #f7f7f9;
+	margin: 0 0.5rem;
+	color:#959595 ;
+	padding-left: 4%;
+}
+#PostPro .proContent .menu span{
+	float: left;
+}
+#PostPro .proContent .menu i{
+	float: right;
+	margin-right: 3%;
+	font-size: 0.8rem !important;
+}
+#PostPro .proContent .proList{
+	position: absolute;
+	width: 90%;
+	height: 10rem;
+	line-height: 2rem;
+	background: #f7f7f9;
+	margin: 0 0.5rem;
+	color:#959595 ;
+	padding-left: 4%;
+	overflow: hidden;
+	overflow-y: scroll;
+	display: none;
+
+}
+#PostPro .proContent .proList li{
+	border-bottom: 1px solid #fff;
+	height: 2rem;
+}
+#PostPro .upPhoto{
+	width: 100%;
+	height: 35%;
+	
+}
+#PostPro .upPhoto .tit{
+	font-size:0.8rem;
+	color:#515151;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-left: 0.5rem;
+	width: auto;
+
+}
+#PostPro .upPhoto .imgBox{
+	position: relative;
+	width: 30%;
+	height: 5rem;
+	text-align: center;
+	line-height: 5rem;
+	margin-left: 0.5rem;
+	font-size: 3rem;
+	color: #b7b7b7;
+	border:1px dashed #b7b7b7;
+}
+#PostPro .upPhoto .imgBox img,#PostPro .upPhoto .imgBox input{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 0;
+	z-index: 3;
+
+}
+#PostPro .upPhoto .imgBox input{
+	z-index: 5;
+	opacity: 0;
+}
+#PostPro .postUp{
+	width:100%;
+	height: 4rem;
+}
+#PostPro .postUp p{
+	width: 50%;
+	height: 2.5rem;
+	border-radius: 1rem;
+	background: #1e88fe;
+	margin:0.5rem auto;
+	line-height: 2.5rem;
+	text-align: center;
+	font-size: 1rem;
+	letter-spacing: 2px;
+	color: #fff;
+	font-weight: bold;
+}
+#PostPro .connect{
+	margin: 2rem 0;
+}
+#PostPro .connect .tit{
+	font-size: 0.9rem;
+	color:#515151;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-left: 0.5rem;
+	width: auto;
+}
+#PostPro  .messDetail{
+	width: 91%;
+	height:4rem;
+	display: block;
+	margin-left: 0.5rem;
+	margin-top:0.5rem;
+	resize:none;
+	background: #f7f7f9;
+	color:#959595;
+	padding-top: 0.5rem;
+	padding-left: 2%;
+	border:none 0;
+	outline: none;
+}
+#PostPro .name,#PostPro .tel{
+	width: auto;
+	height: 3rem;
+	padding-left: 4%;
+	line-height: 3rem;
+	font-size: 0.8rem;
+	color:#959595;
+
+}
+#PostPro .name input,#PostPro .tel input{
+	width: 82%;
+	height: 1.6rem;
+	background:#f7f7f9 ;
+	border:none;
+	outline: none;
+}
+/*投诉*/
+
+#PostMes {
+	background: #f9f9fb;
+	/*background: #3498db;*/
+
+}
+#PostMes .contain{
+	width: 95%;
+	height: auto;
+	background: #fff;
+	margin:2.5% auto;
+
+}
+#PostMes .search{
+	width: 100%;
+	height:2.5rem;
+	background: #fff;
+	
+	line-height:2.5rem ;
+	/*padding-left: 5%;*/
+	
+}
+#PostMes .search input{
+	width: 75%;
+	height: 1.6rem;
+	background: #f7f7f9;
+	border-radius: 1rem;
+	outline: none;
+	border: none;
+	line-height: 1.6rem;
+	padding-left: 1rem;
+	margin-left: 0.5rem;
+}
+#PostMes .search i{
+	font-size: 1.6rem !important;
+	margin-left:0.8rem;
+	color: #228afe;
+}
+#PostMes .proContent{
+	width: 100%;
+	height: 15%;
+	position: relative;
+	z-index: 10;
+}
+#PostMes .proContent .tit{
+	font-size: 0.8rem;
+	color:#515151;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-left: 0.5rem;
+	width: auto;
+}
+#PostMes .proContent .menu{
+	width: 90%;
+	height: 2rem;
+	line-height: 2rem;
+	background: #f7f7f9;
+	margin: 0 0.5rem;
+	color:#959595 ;
+	padding-left: 4%;
+}
+#PostMes .proContent .menu span{
+	float: left;
+}
+#PostMes .proContent .menu i{
+	float: right;
+	margin-right: 3%;
+	font-size: 0.8rem !important;
+}
+#PostMes .proContent .proList{
+	position: absolute;
+	width: 90%;
+	height: 10rem;
+	line-height: 2rem;
+	background: #f7f7f9;
+	margin: 0 0.5rem;
+	color:#959595 ;
+	padding-left: 4%;
+	overflow: hidden;
+	overflow-y: scroll;
+	display: none;
+	z-index: 10;
+
+}
+
+#PostMes  .messDetail{
+	width: 91%;
+	height:4rem;
+	display: block;
+	margin-left: 0.5rem;
+	margin-top:0.5rem;
+	resize:none;
+	background: #f7f7f9;
+	color:#959595;
+	padding-top: 0.5rem;
+	padding-left: 2%;
+	border:none 0;
+	outline: none;
+}
+#PostMes .proContent .proList li{
+	border-bottom: 1px solid #fff;
+	height: 2rem;
+}
+#PostMes .upPhoto{
+	width: 100%;
+	height: 35%;
+
+}
+#PostMes .upPhoto .tit{
+	font-size: 0.8rem;
+	color:#515151;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-left: 0.5rem;
+	width: auto;
+
+}
+#PostMes .upPhoto .imgBox{
+	position: relative;
+	width: 30%;
+	height: 50%;
+	text-align: center;
+	line-height: 5rem;
+	margin-left: 0.5rem;
+	font-size: 3rem;
+	color: #b7b7b7;
+	border:1px dashed #b7b7b7;
+}
+#PostMes .upPhoto .imgBox img,#PostMes .upPhoto .imgBox input{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	border:0 none;
+}
+#PostMes .upPhoto .imgBox input{
+	z-index: 5;
+	opacity: 0;
+}
+#PostMes .postUp{
+	width:100%;
+	height: 4rem;
+}
+#PostMes .postUp p{
+	width: 50%;
+	height: 2.5rem;
+	border-radius: 1rem;
+	background: #1e88fe;
+	margin:0.7rem auto;
+	line-height: 2.5rem;
+	text-align: center;
+	font-size: 1rem;
+	letter-spacing: 2px;
+	color: #fff;
+	font-weight: bold;
+}
+#PostMes .connect{
+	margin:2rem 0;
+}
+#PostMes .connect .tit{
+	font-size: 0.9rem;
+	color:#515151;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-left: 0.5rem;
+	width: auto;
+}
+#PostMes .name,#PostMes .tel{
+	width: auto;
+	height: 3rem;
+	padding-left: 4%;
+	line-height: 3rem;
+	font-size: 0.8rem;
+	color:#959595;
+
+}
+#PostMes .name input,#PostMes .tel input{
+	width: 82%;
+	height: 1.6rem;
+	background:#f7f7f9 ;
+	border:none;
+	outline: none;
+}

@@ -1,0 +1,3 @@
+function statistic(){
+	toolbarActive('statisticTool');
+}

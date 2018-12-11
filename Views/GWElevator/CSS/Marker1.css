@@ -1,0 +1,197 @@
+.amap-marker .marker-route {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    color: #e90000;
+    background: url(../Images/HaveAlarm.png) no-repeat;
+    background-size:100%;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+    .amap-marker .marker-route i:after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        margin-top: -1.4px;
+        margin-left:-1.4px;
+        position: absolute;
+        border: 1px solid #0efcff;
+        /*background: rgba(0,150,255,0.5);*/
+        box-shadow: inset 0px 0px 25px red;
+        border-radius: 50%;
+        outline: none;
+        animation: twinkling 2s linear infinite normal;
+        animation-direction: alternate;
+    }
+
+
+.amap-marker .marker-common {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    color: #e90000;
+    background: url(../Images/Elevator.png) no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+
+.amap-marker-label {
+    color: yellow;
+}
+
+.twinklings {
+    width: 24px;
+    height: 24px;
+    -webkit-animation: twinkling 2s linear infinite normal;
+    border: 1px solid red;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: inset 0px 0px 25px red;
+    z-index: -1
+}
+
+.twinklingsColor {
+    box-shadow: inset 0px 0px 30px #ff0000;
+}
+
+@keyframes twinkling {
+    0% {
+        transform: scale(.1);
+        -webkit-transform: scale(.1);
+    }
+
+
+
+    100% {
+        transform: scale(2);
+        -webkit-transform: scale(2);
+        opacity: 0.2;
+    }
+}
+
+@-moz-keyframes twinkling /* Firefox */
+{
+    0% {
+        transform: scale(.1);
+        -webkit-transform: scale(.1);
+    }
+
+    100% {
+        transform: scale(2);
+        -webkit-transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes twinkling /* Safari 和 Chrome */
+{
+    0% {
+        transform: scale(.1);
+        -webkit-transform: scale(.1);
+    }
+
+    100% {
+        transform: scale(2);
+        -webkit-transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes twinkling /* Opera */
+{
+    0% {
+        transform: scale(.1);
+        -webkit-transform: scale(.1);
+    }
+
+    100% {
+        transform: scale(2);
+        -webkit-transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes twinkling {
+    0% {
+        transform: scale(.1);
+        -ms-transform: scale(.1);
+    }
+
+    100% {
+        transform: scale(2);
+        -ms-transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+
+/*************************************维保单位Marker样式***************************************/
+
+.amap-marker .marker-maintain {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    color: #e90000;
+    background: url(../Images/test1.png) no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+
+/**************************************维保人员Marker样式*****************************************/
+
+.amap-marker .marker-maintainer {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    color: #e90000;
+    background: url(../Images/test2.png) no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+.amap-marker .marker-maintainer2 {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    color: #e90000;
+    background: url(../Images/test2.png) no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+/****************************************电梯详情的Marker样式************************************/
+.amap-marker .marker-elevator {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    color: #e90000;
+    background: url(../Images/HaveAlarm.png) no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+    .amap-marker .marker-elevator i:after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        margin-top: -1.4px;
+        margin-left: -1.4px;
+        position: absolute;
+        border: 1px solid #0efcff;
+        /*background: rgba(0,150,255,0.5);*/
+        box-shadow: inset 0px 0px 25px red;
+        border-radius: 50%;
+        outline: none;
+        animation: twinkling 2s linear infinite normal;
+        animation-direction: alternate;
+    }

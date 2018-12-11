@@ -1,0 +1,77 @@
+.redColor{
+	color:#ec364f !important;
+}
+.greenColor{
+	color:green  !important;
+}
+.huiColor{
+	color:#666 !important;
+}
+#postSubmit{
+	background:#f9f9fb;
+}
+#postSubmit .card{
+	background: #fff;
+}
+#postSubmit .card .card-footer{
+	border-bottom: 1px solid #eee;
+}
+#postSubmit .card .kind i{
+	font-size: 1.2rem !important;
+	color:#ec364f;
+}
+#postSubmit .card .kind span{
+	color:#ec364f;
+}
+#postSubmit .card-content-inner{
+	overflow: hidden;
+	padding: 10px;
+	padding-bottom:5px;
+}
+#postSubmit .card-content-inner p{
+	margin-top:0.2em;
+}
+#postSubmit .card .leftCon{
+	float: left;
+	width:50%;
+	color: #515151;
+	word-wrap: break-word; 
+	word-break: normal; 
+}
+#postSubmit .card .rightSta{
+	float: right;
+	width:50%;
+	height: 100%;
+	color: #515151;
+}
+#postSubmit .card .rightSta .res{
+	margin-bottom: 0.8em;
+	text-align: center;
+}
+#postSubmit .card .rightSta .btnWrap{
+	width: 100%;
+	height:1.8rem;
+	/*margin:0 auto;*/
+}
+#postSubmit .card .rightSta .btn{
+	display: block;
+	height: 1.8rem;
+	width: 30%;
+	text-align: center;
+	padding:0rem 0.5rem ;
+	color:#fff;
+	line-height: 1.8rem;
+	border-radius:0.5rem;
+	background:#1e88fe;
+	margin:0 auto;
+	/*float: left;*/
+}
+/*#postSubmit .card .rightSta .btn:last-child{
+	margin-right: 0rem;
+	float: right;
+}*/
+
+#postSubmit .card .leftCon p span{
+	margin-left: 0.3rem;
+}
+

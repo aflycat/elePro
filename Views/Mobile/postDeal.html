@@ -1,0 +1,162 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left">
+			<a href="#" class="link back icon-only">
+				<i class="iconfont icon-web-back"></i>
+			</a>
+		</div>
+		<div class="center sliding">报 事 处 理</div>
+	</div>
+</div>
+<div class="pages">
+	<div data-page="postDeal" class="page" id="postDeal">
+		<div class="page-content">
+			<input type="hidden" value="" id="task_cl">
+			<input type="hidden" value=""  id="tabId"/>
+			<!-- <input id="equId" type="text" value="" /> -->
+            <input id="fixPeo" type="hidden" value="" />
+            <!-- 维保人序号 -->
+            <input id="compId" type="hidden" value="" />
+            <!-- 维保公司 -->
+             <input id="creatorId" type="hidden" value="" />
+            <!-- 创建人序号 -->
+             <input id="wyId" type="hidden" value="" />
+            <!-- 物业公司序号 -->
+			 <div class="list-block">
+			 	<ul>
+			 		<li>
+                    <div class="item-content">
+                       <div class="item-inner">
+                            <div class="itemHead item-title label">报事时间
+                            </div>
+                            <div class="item-input subTime"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                       <div class="item-inner">
+                            <div class="itemHead item-title label">报事人姓名
+                            </div>
+                            <div class="item-input name"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                       <div class="item-inner">
+                           <div class="itemHead item-title label">报事人联系电话
+                            </div>
+                            <div class="item-input tel"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                       <div class="item-inner">
+                           <div class="itemHead item-title label">报事内容
+                            </div>
+                            <div class="item-input con"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                       <div class="item-inner">
+                           <div class="itemHead item-title label">报事说明
+                            </div>
+                            <div class="item-input remark"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                       <div class="item-inner">
+                           <div class="itemHead item-title label">报事图片
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="imgBoxs">
+                    <div class="item-content">
+                    	<div class="item-inner ">
+                    		 <img src="" style="width:100%;height: auto;">
+                    		  <!-- <img src="/Image/head.jpg" style="width:50%;height: auto;"> -->
+                    	</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                       <div class="item-inner">
+                           <div class="itemHead item-title label">设备序号
+                            </div>
+                            <div class="item-input euipId"></div>
+                        </div>
+                    </div>
+                </li>
+                 <li>
+                    <div class="item-content">
+                       <div class="item-inner">
+                           <div class="itemHead item-title label">处理意见
+                            </div>
+                            <div class="item-input dealMess"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="itemHead item-title label">是否创建任务</div>
+                      <div class="item-input">
+                        <label class="label-switch">
+                          <input type="checkbox" class="createInput">
+                            <div class="checkbox creatTask"></div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+            <div class="proContent backIn">
+                    <p class="tit">报事反馈</p>
+                    <div class="menu">
+                        <input class="feedback" type="text">
+                    </div>
+            </div>
+	 		<div class="proContent">
+                <p class="tit">任务内容</p>
+                <div class="menu">
+                    <input class="conTask" type="text">
+                </div>
+            </div>
+            <div class="proContent">
+                <p class="tit">任务备注</p>
+                <div class="menu">
+                    <input class="remarkV" type="text">
+                </div>
+            </div>
+            <div class="proContent" style="height:4rem;">
+                <p class="tit">任务开始时间</p>
+                <div class="date">
+                      <input readonly id="dateCho" type="text" value="" style="width: 100%;height: 100%;">
+                </div>
+                <div class="time">
+                    <input id="timeCho" type="text" value="" style="width: 100%;height: 100%;padding-left: 0.5rem;">
+                </div>
+            </div>
+            <div class="proContent mem" style="z-index: 20;">
+                    <p class="tit">选择人员</p>
+                    <div class="menu" onclick="checkpeo(this)">
+                        <span>请选择</span>
+                        <i class="icon iconfont icon-web-triangle-bottom" id="checkPro" ></i>
+                        <!-- icon-web-triangle-top -->
+                    </div>
+                    <ul class="list-block  proList peo "></ul>
+            </div>
+            <div class="btn">
+                <p class=" button button-fill button-big" onclick="submitTsk()">确定</p>
+            </div>
+            <div style="height: 6rem;width: 100%;"></div>
+		</div>
+	</div>
+</div>

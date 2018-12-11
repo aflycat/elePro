@@ -1,0 +1,70 @@
+<div class="navbar">
+    <div class="navbar-inner">
+         <div class="left">
+          <a href="#" class="link back icon-only">
+            <i class="iconfont icon-web-back"></i>
+          </a>
+        </div>
+        <div class="center sliding">投诉</div>
+        <div class="right">
+            <a href="#" class="link icon-only open-panel"><i class="iconfont icon-caidan"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <div data-page="PostMes" class="page" id="PostMes">
+        <div class="page-content">
+          <div class="contain">
+            <input type="hidden" id="trueId">
+            <div class="search">
+              <input type="text" name="" id="searchInp" value="" placeholder="请输入设备注册码或扫描二维码"/>
+              <i onclick="myJavaFun.RichScan()" class="icon iconfont icon-web-saomiao"></i>
+            </div>
+                
+                 <div class="proContent">
+                    <p class="tit">投诉内容</p>
+                    <div class="menu" onclick="checkPro(this)">
+                        <span>请选择</span>
+                        <i class="icon iconfont icon-web-triangle-bottom" id="checkPro" ></i>
+                        <!-- icon-web-triangle-top -->
+                    </div>
+                    <ul class="proList">
+                       <li>一直未解决</li>
+                       <li>问题解决速度慢</li>
+                       <li>未彻底解决，还会偶尔发生</li>
+                    </ul>
+
+                </div>
+                 <textarea name="" class="messDetail" id="messDetail" cols="" rows="" placeholder="请详细描述您遇到的问题，不超过100字"></textarea>
+                <div class="upPhoto">
+                     <p class="tit">上传照片</p>
+                     <div class="imgBox">
+                         <span>+</span>
+                        <!--  <img id="upImg"> -->
+                         <input id="imgUp" accept="image/*" type="file" >
+                     </div>
+                </div>
+                <div class="connect">
+                    <p class="tit">请留下您的联系方式，以便与您联系</p>
+                    <div class="name">
+                        <span>姓名:</span>
+                        <input class="nameVal" type="text">
+                    </div>
+
+                    <div class="tel">
+                        <span>电话:</span>
+                        <input class="telVal" type="number">
+                    </div>
+                </div>
+                <div class="postUp">
+                    <div class="row">
+                            <p class="postBtn" onclick=" upLoadMes()">
+                                提交
+                            </p>
+                    </div>
+                </div>
+
+          </div>
+        </div>
+    </div>
+</div>
